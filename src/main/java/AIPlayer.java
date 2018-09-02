@@ -1,8 +1,8 @@
-import com.sun.org.glassfish.gmbal.GmbalException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
 
 public class AIPlayer extends   Player {
 
@@ -78,11 +78,12 @@ public class AIPlayer extends   Player {
 
 
     public GameState getTheBestMove(List<GameState> possibleMoves){
-      double[] stateValues = possibleMoves.stream().mapToDouble(state -> evaluateMove(state)).toArray();
-      System.out.println("These are the values");
-      Arrays.stream(stateValues).forEach(num -> System.out.println(num));
-      GameState gameState = possibleMoves.stream().max(Comparator.comparing(state -> evaluateMove(state))).get();
-      System.out.println("We have chosen this values:  " + evaluateMove(gameState));
+      GameState gameState;
+      int length = possibleMoves.size();
+      Random numGen = new Random();
+      int randomIndex = numGen.nextInt(length);
+      if(this.playerSymbol == 'X') gameState = possibleMoves.stream().max(Comparator.comparing(state -> evaluateMove(state))).get();
+      else gameState = possibleMoves.get(randomIndex);
       return gameState;
 
     }

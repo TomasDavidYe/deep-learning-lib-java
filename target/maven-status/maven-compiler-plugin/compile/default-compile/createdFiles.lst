@@ -1,1 +1,11 @@
+LabeledResult.class
 Program.class
+Player.class
+HumanPlayer.class
+GameState.class
+Hypothesis.class
+ModelTrainer.class
+AIPlayer.class
+GameRecord.class
+GameHost.class
+GameStateRecord.class
