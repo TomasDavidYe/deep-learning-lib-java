@@ -17,6 +17,7 @@ public class GameHost {
     playerO.setPlayerSymbol('O');
   }
 
+
   public GameRecord playASingleGame(){
     GameRecord gameRecord = new GameRecord();
     int turnsPlayed = 0;
@@ -62,22 +63,6 @@ public class GameHost {
     return gameRecord;
   }
 
-  public List<GameStateRecord> produceGameStateRecordsFromGameRecord(GameRecord record){
-    List<GameStateRecord> result = new ArrayList<>();
-    char winningSymbol = record.getWinningSymbol();
-    record.getGameStates().forEach(gameState -> {
-      result.add(new GameStateRecord(gameState, winningSymbol));
-    });
 
-    return result;
-  }
-
-  public void storeGameRecord(List<GameStateRecord> gameStateRecords){
-    gameStateRecords.forEach(gameStateRecord -> {
-      System.out.println("Storing gamestate: ");
-      gameStateRecord.getGameState().printOutState();
-      System.out.println("With the winning player:  " + gameStateRecord.getWinningSymbol());
-    });
-  }
 
 }
