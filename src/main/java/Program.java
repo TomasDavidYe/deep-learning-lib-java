@@ -1,8 +1,9 @@
 import java.sql.SQLException;
+import java.util.Arrays;
 
 public class Program {
 
-  public static final String TABLE_NAME = "GameState2";
+  public static final String TABLE_NAME = "GameState3";
   public static final String URL = "jdbc:sqlite:testDb.db";
   public static final int NUM_OF_GAMES = 500;
 
@@ -179,9 +180,8 @@ public class Program {
 
   public static void main(String[] argv) throws Exception {
 
-   letRandomPlayersPlayAgainstEachOther();
-
-//Unit test material
+    playAgainstPlayerX();
+    //Unit test material
 
 
 

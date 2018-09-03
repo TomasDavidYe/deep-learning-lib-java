@@ -10,7 +10,7 @@ public class AIPlayer extends   Player {
     double[] weights;
 
     public AIPlayer(){
-      weights = new double[10];
+      weights = new double[19];
     }
 
     public AIPlayer(double[] weights){
@@ -36,13 +36,20 @@ public class AIPlayer extends   Player {
     }
 
     public double evaluateMove(GameState gameState){
-      int[] features = new int[10];
+      int[] features = new int[19];
       features[0] = 1;
       int index = 0;
       for(int i = 0; i<3;i++){
         for(int j = 0; j<3; j++){
           index++;
           features[index] = gameState.getValueAt(i,j);
+        }
+      }
+
+      for(int i = 0; i<3;i++){
+        for(int j = 0; j<3; j++){
+          index++;
+          features[index] = gameState.getValueAt(i,j)*gameState.getValueAt(i,j);
         }
       }
       return hypothesis(features);

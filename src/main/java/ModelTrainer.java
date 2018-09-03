@@ -13,7 +13,7 @@ public class ModelTrainer {
   Connection conn;
   String tableName;
   generalHypothesis hypothesis;
-  public static final double CUSTOM_LEARNING_RATE =4;
+  public static final double CUSTOM_LEARNING_RATE =1;
   public static final int CUSTOM_NUMBER_OF_ITERATIONS = 1000;
 
   public ModelTrainer(String url, String tableName) throws SQLException {
@@ -129,15 +129,18 @@ public class ModelTrainer {
   }
 
   public int[] getFeaturesFromId(String id){
-    int[] features = new int[10];
+    int[] features = new int[19];
     features[0] = 1;
     for(int i = 0; i < 9; i++ ){
       if(id.charAt(i) == 'X'){
         features[i + 1] = 1;
+        features[i + 10] = 1;
       } else if(id.charAt(i) == 'O'){
         features[i+1] = -1;
+        features[i + 10] = 1;
       }else{
         features[i+1] = 0;
+        features[i + 10] = 0;
       }
     }
     return features;
@@ -151,9 +154,9 @@ public class ModelTrainer {
     double[] optimalWeights = initialWeights;
     System.out.println("Initial Cost =  "+ logisticRegressionCost(results,initialWeights));
     for(int iteration = 1; iteration <= maxNumOfIterations; iteration++ ){
-      double[] temp = new double[10];
+      double[] temp = new double[19];
       double[] gradient = logisticRegressionGradient(results, optimalWeights);
-      for(int k = 0; k < 10; k++){
+      for(int k = 0; k < 19; k++){
         optimalWeights[k] = optimalWeights[k] - (learningRate * gradient[k]);
       }
       System.out.println("Cost of in iteration "+iteration+" =  "+ logisticRegressionCost(results,optimalWeights) );
@@ -181,8 +184,8 @@ public class ModelTrainer {
   }
 
   public double[] logisticRegressionGradient(List<LabeledResult> results, double[] weights){
-    double[] gradient = new double[10];
-    for(int k = 0; k<10; k++){
+    double[] gradient = new double[19];
+    for(int k = 0; k<19; k++){
       gradient[k] = 0;
       for(LabeledResult result : results){
         int y = result.label;
@@ -215,7 +218,7 @@ public class ModelTrainer {
   }
 
   public double[] getWeightsFromDb(char playerSymbol) throws SQLException{
-    double[] weights = new double[10];
+    double[] weights = new double[19];
     String weightTableName = "ModelWeightsFor" + playerSymbol;
     String selectQuery = "SELECT * FROM "+weightTableName;
     Statement statement = conn.createStatement();
@@ -230,7 +233,7 @@ public class ModelTrainer {
 
   public void storeWeightsIntoDb(char playerSymbol, double[] weights) throws SQLException{
     String weightTableName = "ModelWeightsFor" + playerSymbol;
-    for(int i = 0; i < 10; i++){
+    for(int i = 0; i < 19; i++){
       String updateQuery = "UPDATE "+ weightTableName +" SET weight = ? WHERE (id = ?)";
       PreparedStatement updateStatement = conn.prepareStatement(updateQuery);
       updateStatement.setDouble(1, weights[i]);

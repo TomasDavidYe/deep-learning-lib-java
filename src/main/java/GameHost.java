@@ -19,16 +19,19 @@ public class GameHost {
 
 
   public GameRecord playASingleGame(){
+    boolean humanIsPlaying = (playerX instanceof HumanPlayer)||(playerO instanceof HumanPlayer);
     GameRecord gameRecord = new GameRecord();
     int turnsPlayed = 0;
     GameState lastStatePlayed = initialState;
-    //lastStatePlayed.printOutState();
+    if(humanIsPlaying) lastStatePlayed.printOutState();
     GameState temp;
     boolean playerXIsPlaying = true;
 
     while(!lastStatePlayed.hasWinner() && turnsPlayed < 9){
-      //System.out.println();
-      //System.out.println();
+      if(humanIsPlaying){
+        System.out.println();
+        System.out.println();
+      }
       turnsPlayed++;
       playerXIsPlaying = turnsPlayed % 2 == 1;
       if(playerXIsPlaying){
@@ -40,7 +43,7 @@ public class GameHost {
         lastStatePlayed = temp;
       }
       gameRecord.addGameState(lastStatePlayed);
-      //lastStatePlayed.printOutState();
+      if(humanIsPlaying)lastStatePlayed.printOutState();
     }
     String resultMessage;
     if(lastStatePlayed.hasWinner()){
