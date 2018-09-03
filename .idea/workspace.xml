@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec5125e5-0a72-4254-bf9c-046420e79a77" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AIPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AIPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameHost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hypothesis.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModelTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModelTrainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Hypothesis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDb.db" beforeDir="false" afterPath="$PROJECT_DIR$/testDb.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,7 +53,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="389">
@@ -68,6 +61,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="110" lean-forward="true" selection-start-line="3" selection-start-column="110" selection-end-line="3" selection-end-column="110" />
             </state>
           </provider>
         </entry>
@@ -138,6 +140,7 @@
         <option value="$PROJECT_DIR$/src/main/java/GameHost.java" />
         <option value="$PROJECT_DIR$/src/main/java/ModelTrainer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Program.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -301,12 +304,12 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5083333" side_tool="true" weight="0.2865566" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.14097223" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49166667" visible="true" weight="0.2865566" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49166667" weight="0.2865566" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.66875" weight="0.32900944" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.66875" visible="true" weight="0.32900944" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49930555" weight="0.32900944" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -588,6 +591,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="110" lean-forward="true" selection-start-line="3" selection-start-column="110" selection-end-line="3" selection-end-column="110" />
         </state>
       </provider>
     </entry>
