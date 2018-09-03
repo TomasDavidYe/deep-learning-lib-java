@@ -9,6 +9,10 @@ public class AIPlayer extends   Player {
 
     double[] weights;
 
+    public AIPlayer(){
+      weights = new double[10];
+    }
+
     public AIPlayer(double[] weights){
       super();
       this.weights = weights;
@@ -78,14 +82,14 @@ public class AIPlayer extends   Player {
 
 
     public GameState getTheBestMove(List<GameState> possibleMoves){
-      GameState gameState;
+      return possibleMoves.stream().max(Comparator.comparing(state -> evaluateMove(state))).get();
+    }
+
+    public GameState getRandomMove(List<GameState> possibleMoves){
       int length = possibleMoves.size();
       Random numGen = new Random();
       int randomIndex = numGen.nextInt(length);
-      if(this.playerSymbol == 'X') gameState = possibleMoves.stream().max(Comparator.comparing(state -> evaluateMove(state))).get();
-      else gameState = possibleMoves.get(randomIndex);
-      return gameState;
-
+      return possibleMoves.get(randomIndex);
     }
 
 }

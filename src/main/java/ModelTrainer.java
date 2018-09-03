@@ -13,6 +13,8 @@ public class ModelTrainer {
   Connection conn;
   String tableName;
   generalHypothesis hypothesis;
+  public static final double CUSTOM_LEARNING_RATE =4;
+  public static final int CUSTOM_NUMBER_OF_ITERATIONS = 1000;
 
   public ModelTrainer(String url, String tableName) throws SQLException {
     conn = DriverManager.getConnection(url);
@@ -42,7 +44,6 @@ public class ModelTrainer {
 
 
     if(dbContainsEntry(id)){
-      System.out.println("Updating existing state");
       String selectQuery = "SELECT * FROM " + tableName +" WHERE (id = ?)";
       PreparedStatement selectStatement = conn.prepareStatement(selectQuery);
       selectStatement.setString(1,id);
@@ -142,26 +143,29 @@ public class ModelTrainer {
     return features;
   }
 
+  public void closeConnection() throws  SQLException{
+    conn.close();
+  }
+
   public double[] getOptimalWeights(List<LabeledResult> results, double[] initialWeights, double learningRate, int maxNumOfIterations){
     double[] optimalWeights = initialWeights;
-    System.out.println("Initial cost =  " + logisticRegressionCost(results,initialWeights));
+    System.out.println("Initial Cost =  "+ logisticRegressionCost(results,initialWeights));
     for(int iteration = 1; iteration <= maxNumOfIterations; iteration++ ){
       double[] temp = new double[10];
       double[] gradient = logisticRegressionGradient(results, optimalWeights);
       for(int k = 0; k < 10; k++){
         optimalWeights[k] = optimalWeights[k] - (learningRate * gradient[k]);
       }
-      System.out.println("Cost in iteration "+iteration+" =  "+ logisticRegressionCost(results,optimalWeights) );
+      System.out.println("Cost of in iteration "+iteration+" =  "+ logisticRegressionCost(results,optimalWeights) );
 
     }
     return optimalWeights;
   }
 
   public double[] getOptimalWeights(List<LabeledResult> results, double[] initialWeights){
-    double customLearningRate = 1;
-    int customNumberOfIterations = 100;
-    return getOptimalWeights(results,initialWeights,customLearningRate,customNumberOfIterations);
+    return getOptimalWeights(results,initialWeights, CUSTOM_LEARNING_RATE, CUSTOM_NUMBER_OF_ITERATIONS);
   }
+
 
 
   public double logisticRegressionCost(List<LabeledResult> results, double[] weights){
@@ -234,5 +238,38 @@ public class ModelTrainer {
       updateStatement.executeUpdate();
     }
 
+  }
+
+  public int totalStates() throws SQLException {
+    String selectQuery = "SELECT * FROM "+tableName;
+    Statement statement = conn.createStatement();
+    ResultSet resultSet = statement.executeQuery(selectQuery);
+    int result = 0;
+    while (resultSet.next()){
+      result += resultSet.getInt("totalOccurrences");
+    }
+    return result;
+  }
+
+  public int totalStatesWonByX() throws  SQLException {
+    String selectQuery = "SELECT * FROM "+tableName;
+    Statement statement = conn.createStatement();
+    ResultSet resultSet = statement.executeQuery(selectQuery);
+    int result = 0;
+    while (resultSet.next()){
+      result += resultSet.getInt("occurrencesWhereXWon");
+    }
+    return result;
+  }
+
+  public int totalStatesWonByO() throws SQLException {
+    String selectQuery = "SELECT * FROM "+tableName;
+    Statement statement = conn.createStatement();
+    ResultSet resultSet = statement.executeQuery(selectQuery);
+    int result = 0;
+    while (resultSet.next()){
+      result += resultSet.getInt("occurrencesWhereOWon");
+    }
+    return result;
   }
 }

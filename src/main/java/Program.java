@@ -2,35 +2,185 @@ import java.sql.SQLException;
 
 public class Program {
 
-  public static void letPlayerXPractise(int numOfGames, String url, String tableName) throws SQLException {
-    ModelTrainer trainer = new ModelTrainer(url,tableName);
+  public static final String TABLE_NAME = "GameState2";
+  public static final String URL = "jdbc:sqlite:testDb.db";
+  public static final int NUM_OF_GAMES = 500;
+
+  public static void letPlayerXPractise(int numOfGames) throws SQLException {
+    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
     for(int i = 1; i<= numOfGames; i++) {
+      System.out.println("Starting game "+ i + " for player X");
       double[] weightsForX = trainer.getWeightsFromDb('X');
       Player playerX = new AIPlayer(weightsForX);
-      Player playerO = new AIPlayer(new double[10]);
+      Player playerO = new RandomPlayer();
       GameHost gameHost = new GameHost(playerX, playerO);
       GameRecord gameRecord = gameHost.playASingleGame();
       trainer.storeGameRecord(gameRecord);
       double[] betterWeightsForX = trainer.getOptimalWeights(trainer.getLabeledResultsFromDb('X'), weightsForX);
+      System.out.println("Learning weights for X");
       trainer.storeWeightsIntoDb('X', betterWeightsForX);
     }
+    System.out.println("Total states visited =  " + totalStatesVisited());
+    System.out.println("Total states won by X =  " + statesWonByX());
+    System.out.println("Total states won by O =  " + statesWonByO());
+    trainer.closeConnection();
   }
 
-  public static void playAgainstPlayerX(String url, String tableName) throws SQLException{
-    ModelTrainer trainer = new ModelTrainer(url,tableName);
+  public static void playAgainstPlayerX() throws SQLException{
+    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
     double[] weightsForX = trainer.getWeightsFromDb('X');
     Player playerX = new AIPlayer(weightsForX);
     Player playerO = new HumanPlayer();
     GameHost gameHost = new GameHost(playerX, playerO);
-    gameHost.playASingleGame();
+    GameRecord gameRecord = gameHost.playASingleGame();
+    trainer.storeGameRecord(gameRecord);
+    System.out.println("Learning weights for X");
+    double[] betterWeightsForX = trainer.getOptimalWeights(trainer.getLabeledResultsFromDb('X'), weightsForX);
+    trainer.storeWeightsIntoDb('X', betterWeightsForX);
+    System.out.println("Total states visited =  " + totalStatesVisited());
+    System.out.println("Total states won by X =  " + statesWonByX());
+    System.out.println("Total states won by O =  " + statesWonByO());
+    trainer.closeConnection();
 
+  }
+
+  public static void playAgainstPlayerO() throws SQLException{
+    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+    double[] weightsForO = trainer.getWeightsFromDb('O');
+    Player playerX = new HumanPlayer();
+    Player playerO = new AIPlayer(weightsForO);
+    GameHost gameHost = new GameHost(playerX, playerO);
+    GameRecord gameRecord = gameHost.playASingleGame();
+    trainer.storeGameRecord(gameRecord);
+    System.out.println("Learning weights for O");
+    double[] betterWeightsForO = trainer.getOptimalWeights(trainer.getLabeledResultsFromDb('O'), weightsForO);
+    trainer.storeWeightsIntoDb('O', betterWeightsForO);
+    System.out.println("Total states visited =  " + totalStatesVisited());
+    System.out.println("Total states won by X =  " + statesWonByX());
+    System.out.println("Total states won by O =  " + statesWonByO());
+    trainer.closeConnection();
+  }
+
+  public static void letPlayersPractiseTogether(int numOfGames) throws SQLException{
+    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+    for(int i = 1; i<= numOfGames; i++) {
+      double[] weightsForX = trainer.getWeightsFromDb('X');
+      double[] weightsForO = trainer.getWeightsFromDb('O');
+      Player playerX = new AIPlayer(weightsForX);
+      Player playerO = new AIPlayer(weightsForO);
+      GameHost gameHost = new GameHost(playerX, playerO);
+      GameRecord gameRecord = gameHost.playASingleGame();
+      trainer.storeGameRecord(gameRecord);
+      System.out.println("Learning weights for X");
+      double[] betterWeightsForX = trainer.getOptimalWeights(trainer.getLabeledResultsFromDb('X'), weightsForX);
+      System.out.println("Learning weights for O");
+      double[] betterWeightsForO = trainer.getOptimalWeights(trainer.getLabeledResultsFromDb('O'), weightsForO);
+
+      trainer.storeWeightsIntoDb('X', betterWeightsForX);
+      trainer.storeWeightsIntoDb('O', betterWeightsForO);
+    }
+    System.out.println("Total states visited =  " + totalStatesVisited());
+    System.out.println("Total states won by X =  " + statesWonByX());
+    System.out.println("Total states won by O =  " + statesWonByO());
+    trainer.closeConnection();
+  }
+
+  public static void letPlayerOPractise(int numOfGames) throws  SQLException{
+    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+    for(int i = 1; i<= numOfGames; i++) {
+      System.out.println("Starting game "+ i + " for player O");
+      double[] weightsForO = trainer.getWeightsFromDb('O');
+      Player playerX = new RandomPlayer();
+      Player playerO = new AIPlayer(weightsForO);
+      GameHost gameHost = new GameHost(playerX, playerO);
+      GameRecord gameRecord = gameHost.playASingleGame();
+      trainer.storeGameRecord(gameRecord);
+      double[] betterWeightsForO = trainer.getOptimalWeights(trainer.getLabeledResultsFromDb('O'), weightsForO);
+      System.out.println("Learning weights for O");
+      trainer.storeWeightsIntoDb('O', betterWeightsForO);
+    }
+    System.out.println("Total states visited =  " + totalStatesVisited());
+    System.out.println("Total states won by X =  " + statesWonByX());
+    System.out.println("Total states won by O =  " + statesWonByO());
+    trainer.closeConnection();
+  }
+
+  public static int totalStatesVisited() throws SQLException {
+    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+    return trainer.totalStates();
+  }
+
+  public static int statesWonByX() throws  SQLException{
+    ModelTrainer trainer = new ModelTrainer(URL, TABLE_NAME);
+    return trainer.totalStatesWonByX();
+
+  }
+
+  public static int statesWonByO() throws  SQLException{
+    ModelTrainer trainer = new ModelTrainer(URL, TABLE_NAME);
+    return trainer.totalStatesWonByO();
+  }
+
+  public static void eachPlayerPracticesOnHisOwn() throws SQLException {
+    letPlayerOPractise(NUM_OF_GAMES);
+    letPlayerXPractise(NUM_OF_GAMES);
+    System.out.println("Total states visited =  " + totalStatesVisited());
+    System.out.println("Total states won by X =  " + statesWonByX());
+    System.out.println("Total states won by O =  " + statesWonByO());
+
+  }
+
+  public static void letRandomPlayersPlayAgainstEachOther() throws SQLException {
+    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+    int victoriesOfX = 0;
+    int victoriesOfO = 0;
+    int ties = 0;
+    for(int i = 1; i<= NUM_OF_GAMES; i++) {
+      System.out.println("Playing game number:  " + i);
+      Player playerX = new RandomPlayer();
+      Player playerO = new RandomPlayer();
+      GameHost gameHost = new GameHost(playerX, playerO);
+      GameRecord gameRecord = gameHost.playASingleGame();
+      char winningSymbol = gameRecord.getWinningSymbol();
+      switch (winningSymbol){
+        case 'X': victoriesOfX++;
+          break;
+        case 'O': victoriesOfO++;
+          break;
+        case 'N': ties++;
+          break;
+      }
+      trainer.storeGameRecord(gameRecord);
+    }
+    System.out.println("Total games played in the session =   " + NUM_OF_GAMES);
+    System.out.println("Total games won by X =                " + victoriesOfX);
+    System.out.println("Total states won by O =               " + victoriesOfO);
+    System.out.println("Total ties =                          " + ties);
+    System.out.println("Total states visited =  " + totalStatesVisited());
+    System.out.println("Total states won by X =  " + statesWonByX());
+    System.out.println("Total states won by O =  " + statesWonByO());
+    trainer.closeConnection();
+  }
+
+  public static void letPlayersLearn() throws SQLException{
+    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+
+    double[] weightsForX = trainer.getWeightsFromDb('X');
+    double[] weightsForO = trainer.getWeightsFromDb('O');
+
+    System.out.println("Learning weights for X");
+    double[] betterWeightsForX = trainer.getOptimalWeights(trainer.getLabeledResultsFromDb('X'), weightsForX);
+    System.out.println("Learning weights for O");
+    double[] betterWeightsForO = trainer.getOptimalWeights(trainer.getLabeledResultsFromDb('O'), weightsForO);
+
+    trainer.storeWeightsIntoDb('X', betterWeightsForX);
+    trainer.storeWeightsIntoDb('O', betterWeightsForO);
   }
 
   public static void main(String[] argv) throws Exception {
 
-    String url = "jdbc:sqlite:testDb.db";
-    String tableName = "GameState2";
-    playAgainstPlayerX(url,tableName);
+   letRandomPlayersPlayAgainstEachOther();
+
 //Unit test material
 
 
@@ -42,7 +192,6 @@ public class Program {
 */
 
 
-    int numberOfGames = 500;
 
 
 

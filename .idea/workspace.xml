@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec5125e5-0a72-4254-bf9c-046420e79a77" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/LabeledResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RandomPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AIPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AIPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GameHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameHost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ModelTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ModelTrainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/AIPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AIPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GameHost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GameHost.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ModelTrainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ModelTrainer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tictactoe-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/tictactoe-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Program.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testDb.db" beforeDir="false" afterPath="$PROJECT_DIR$/testDb.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,16 +46,25 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/HumanPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameHost.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RandomPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/RandomPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameHost.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/GameHost.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="130">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,8 +75,8 @@
       <file leaf-file-name="ModelTrainer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ModelTrainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+            <state relative-caret-position="-376">
+              <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
               <folding>
                 <element signature="method#ModelTrainer#0;class#ModelTrainer#0" />
                 <element signature="e#535#578#0" />
@@ -77,23 +85,39 @@
                 <element signature="method#dbContainsEntry#0;class#ModelTrainer#0" />
                 <element signature="method#getLabeledResultsFromDb#0;class#ModelTrainer#0" />
                 <element signature="method#getFeaturesFromId#0;class#ModelTrainer#0" />
-                <element signature="method#getOptimalWeights#0;class#ModelTrainer#0" />
                 <element signature="method#logisticRegressionCost#0;class#ModelTrainer#0" />
                 <element signature="method#logisticRegressionGradient#0;class#ModelTrainer#0" />
-                <element signature="method#storeGameRecord#0;class#ModelTrainer#0" />
-                <element signature="e#5185#5427#0" />
                 <element signature="class#generalHypothesis#0;class#ModelTrainer#0" />
                 <element signature="method#getWeightsFromDb#0;class#ModelTrainer#0" />
+                <element signature="method#storeWeightsIntoDb#0;class#ModelTrainer#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Program.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+            <state relative-caret-position="2715">
+              <caret line="181" column="42" selection-start-line="181" selection-start-column="42" selection-end-line="181" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameRecord.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GameRecord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#279#280#0" expanded="true" />
+                <element signature="e#309#310#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="true" />
+                <element signature="e#380#381#0" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,10 +125,12 @@
       <file leaf-file-name="AIPlayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/AIPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="80" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="585">
+              <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#222#223#0" expanded="true" />
+                <element signature="e#257#258#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,8 +139,8 @@
       <file leaf-file-name="LabeledResult.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/LabeledResult.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state>
+              <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -144,14 +170,15 @@
         <option value="$PROJECT_DIR$/src/main/java/GameRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/GameStateRecord.java" />
-        <option value="$PROJECT_DIR$/src/main/java/GameHost.java" />
         <option value="$PROJECT_DIR$/src/main/java/GameState.java" />
         <option value="$PROJECT_DIR$/src/main/java/HumanPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Hypothesis.java" />
         <option value="$PROJECT_DIR$/src/main/java/LabeledResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/AIPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RandomPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ModelTrainer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Program.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GameHost.java" />
       </list>
     </option>
   </component>
@@ -313,9 +340,9 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5076389" side_tool="true" weight="0.2865566" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5083333" side_tool="true" weight="0.2865566" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.14097223" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4923611" visible="true" weight="0.2865566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49166667" visible="true" weight="0.2865566" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.66875" weight="0.32900944" />
       <window_info id="Capture Tool" order="2" />
@@ -338,7 +365,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4923611" visible="true" weight="0.2865566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49166667" visible="true" weight="0.2865566" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
@@ -353,7 +380,7 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.73125" weight="0.39976415" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.66875" weight="0.32900944" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5076389" side_tool="true" weight="0.2865566" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5083333" side_tool="true" visible="true" weight="0.2865566" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="Capture Tool" order="5" />
@@ -416,6 +443,8 @@
           <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -439,13 +468,11 @@
             <element signature="method#dbContainsEntry#0;class#ModelTrainer#0" />
             <element signature="method#getLabeledResultsFromDb#0;class#ModelTrainer#0" />
             <element signature="method#getFeaturesFromId#0;class#ModelTrainer#0" />
-            <element signature="method#getOptimalWeights#0;class#ModelTrainer#0" />
             <element signature="method#logisticRegressionCost#0;class#ModelTrainer#0" />
             <element signature="method#logisticRegressionGradient#0;class#ModelTrainer#0" />
-            <element signature="method#storeGameRecord#0;class#ModelTrainer#0" />
-            <element signature="e#5185#5427#0" />
             <element signature="class#generalHypothesis#0;class#ModelTrainer#0" />
             <element signature="method#getWeightsFromDb#0;class#ModelTrainer#0" />
+            <element signature="method#storeWeightsIntoDb#0;class#ModelTrainer#0" />
           </folding>
         </state>
       </provider>
@@ -464,28 +491,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GameRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#478#479#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GameStateRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -521,10 +536,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LabeledResult.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/HumanPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -535,37 +550,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GameHost.java">
+    <entry file="file://$PROJECT_DIR$/testDb.db-journal">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GameRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="45">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HumanPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/AIPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="585">
+          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/LabeledResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2715">
+          <caret line="181" column="42" selection-start-line="181" selection-start-column="42" selection-end-line="181" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ModelTrainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        <state relative-caret-position="-376">
+          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
           <folding>
             <element signature="method#ModelTrainer#0;class#ModelTrainer#0" />
             <element signature="e#535#578#0" />
@@ -574,21 +607,29 @@
             <element signature="method#dbContainsEntry#0;class#ModelTrainer#0" />
             <element signature="method#getLabeledResultsFromDb#0;class#ModelTrainer#0" />
             <element signature="method#getFeaturesFromId#0;class#ModelTrainer#0" />
-            <element signature="method#getOptimalWeights#0;class#ModelTrainer#0" />
             <element signature="method#logisticRegressionCost#0;class#ModelTrainer#0" />
             <element signature="method#logisticRegressionGradient#0;class#ModelTrainer#0" />
-            <element signature="method#storeGameRecord#0;class#ModelTrainer#0" />
-            <element signature="e#5185#5427#0" />
             <element signature="class#generalHypothesis#0;class#ModelTrainer#0" />
             <element signature="method#getWeightsFromDb#0;class#ModelTrainer#0" />
+            <element signature="method#storeWeightsIntoDb#0;class#ModelTrainer#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/RandomPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        <state relative-caret-position="105">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GameHost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -22,26 +22,25 @@ public class GameHost {
     GameRecord gameRecord = new GameRecord();
     int turnsPlayed = 0;
     GameState lastStatePlayed = initialState;
-    lastStatePlayed.printOutState();
+    //lastStatePlayed.printOutState();
     GameState temp;
     boolean playerXIsPlaying = true;
 
     while(!lastStatePlayed.hasWinner() && turnsPlayed < 9){
+      //System.out.println();
+      //System.out.println();
       turnsPlayed++;
-      System.out.println("Starting turn number " + turnsPlayed);
       playerXIsPlaying = turnsPlayed % 2 == 1;
       if(playerXIsPlaying){
-        System.out.println("X is playing");
         temp = playerX.play(lastStatePlayed);
         lastStatePlayed = temp;
       } else
       {
-        System.out.println("O is playing");
         temp = playerO.play(lastStatePlayed);
         lastStatePlayed = temp;
       }
       gameRecord.addGameState(lastStatePlayed);
-      lastStatePlayed.printOutState();
+      //lastStatePlayed.printOutState();
     }
     String resultMessage;
     if(lastStatePlayed.hasWinner()){
