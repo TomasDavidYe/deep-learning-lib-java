@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec5125e5-0a72-4254-bf9c-046420e79a77" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/NetTrainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/NeuralNet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ProjectMath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ProjectMathTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/NeuralNetTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AIPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AIPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ModelTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AIPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AIPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ModelTrainer$generalHypothesis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ModelTrainer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tictactoe-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/tictactoe-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDb.db" beforeDir="false" afterPath="$PROJECT_DIR$/testDb.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NetTrainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetTrainer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NeuralNet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NeuralNet.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,15 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GameHost.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/GameHost.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NetTrainer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NetTrainer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/NetTrainer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="555">
-              <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#541#542#0" expanded="true" />
@@ -111,11 +87,20 @@
       <file leaf-file-name="NeuralNet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/NeuralNet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+            <state relative-caret-position="105">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NeuralNetTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/NeuralNetTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="30" column="6" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -163,8 +148,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -198,6 +183,7 @@
         <option value="$PROJECT_DIR$/src/main/java/Program.java" />
         <option value="$PROJECT_DIR$/src/main/java/NeuralNet.java" />
         <option value="$PROJECT_DIR$/src/main/java/NetTrainer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/NeuralNetTest.java" />
       </list>
     </option>
   </component>
@@ -298,7 +284,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Program">
+  <component name="RunManager" selected="JUnit.NeuralNetTest.multiplyByScalarTest">
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Program" />
       <module name="tictactoe" />
@@ -306,6 +292,57 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="NeuralNetTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoe" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NeuralNetTest" />
+      <option name="METHOD_NAME" value="add" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="NeuralNetTest.addTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoe" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NeuralNetTest" />
+      <option name="METHOD_NAME" value="addTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="NeuralNetTest.multiplyByScalarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoe" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NeuralNetTest" />
+      <option name="METHOD_NAME" value="multiplyByScalarTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="ProjectMathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tictactoe" />
@@ -315,57 +352,6 @@
       <option name="MAIN_CLASS_NAME" value="ProjectMathTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ProjectMathTest.sigmoidMatrixTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tictactoe" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProjectMathTest" />
-      <option name="METHOD_NAME" value="sigmoidMatrixTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ProjectMathTest.sigmoidPrimeMatrixTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tictactoe" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProjectMathTest" />
-      <option name="METHOD_NAME" value="sigmoidPrimeMatrixTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="ProjectMathTest.sigmoidTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tictactoe" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProjectMathTest" />
-      <option name="METHOD_NAME" value="sigmoidTest" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -414,19 +400,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.ProjectMathTest.sigmoidTest" />
-      <item itemvalue="JUnit.ProjectMathTest.sigmoidMatrixTest" />
-      <item itemvalue="JUnit.ProjectMathTest.sigmoidPrimeMatrixTest" />
       <item itemvalue="JUnit.ProjectMathTest" />
       <item itemvalue="Application.Program" />
+      <item itemvalue="JUnit.NeuralNetTest.add" />
+      <item itemvalue="JUnit.NeuralNetTest.addTest" />
+      <item itemvalue="JUnit.NeuralNetTest.multiplyByScalarTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NeuralNetTest.multiplyByScalarTest" />
+        <item itemvalue="JUnit.NeuralNetTest.addTest" />
+        <item itemvalue="JUnit.NeuralNetTest.add" />
         <item itemvalue="Application.Program" />
         <item itemvalue="JUnit.ProjectMathTest" />
-        <item itemvalue="JUnit.ProjectMathTest.sigmoidPrimeMatrixTest" />
-        <item itemvalue="JUnit.ProjectMathTest.sigmoidMatrixTest" />
-        <item itemvalue="JUnit.ProjectMathTest.sigmoidTest" />
       </list>
     </recent_temporary>
   </component>
@@ -444,35 +430,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProjectMathTest_sigmoidPrimeTest - 2018.09.10 at 14h 39m 10s.xml">
-      <configuration name="ProjectMathTest.sigmoidPrimeTest" configurationId="JUnit" />
+    <history-entry file="NeuralNetTest_add - 2018.09.14 at 11h 18m 56s.xml">
+      <configuration name="NeuralNetTest.add" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProjectMathTest_sigmoidTest - 2018.09.10 at 14h 39m 27s.xml">
-      <configuration name="ProjectMathTest.sigmoidTest" configurationId="JUnit" />
+    <history-entry file="NeuralNetTest_addTest - 2018.09.14 at 11h 19m 16s.xml">
+      <configuration name="NeuralNetTest.addTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProjectMathTest_sigmoidPrimeTest - 2018.09.10 at 14h 39m 31s.xml">
-      <configuration name="ProjectMathTest.sigmoidPrimeTest" configurationId="JUnit" />
+    <history-entry file="NeuralNetTest_multiplyByScalarTest - 2018.09.14 at 11h 19m 26s.xml">
+      <configuration name="NeuralNetTest.multiplyByScalarTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProjectMathTest_sigmoidPrimeTest - 2018.09.10 at 14h 42m 34s.xml">
-      <configuration name="ProjectMathTest.sigmoidPrimeTest" configurationId="JUnit" />
+    <history-entry file="NeuralNetTest_multiplyByScalarTest - 2018.09.14 at 11h 19m 52s.xml">
+      <configuration name="NeuralNetTest.multiplyByScalarTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProjectMathTest_sigmoidTest - 2018.09.10 at 14h 42m 37s.xml">
-      <configuration name="ProjectMathTest.sigmoidTest" configurationId="JUnit" />
+    <history-entry file="NeuralNetTest_multiplyByScalarTest - 2018.09.14 at 11h 21m 33s.xml">
+      <configuration name="NeuralNetTest.multiplyByScalarTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProjectMathTest_sigmoidMatrixTest - 2018.09.10 at 14h 47m 29s.xml">
-      <configuration name="ProjectMathTest.sigmoidMatrixTest" configurationId="JUnit" />
+    <history-entry file="NeuralNetTest_multiplyByScalarTest - 2018.09.14 at 11h 21m 42s.xml">
+      <configuration name="NeuralNetTest.multiplyByScalarTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProjectMathTest_sigmoidMatrixTest - 2018.09.10 at 14h 47m 45s.xml">
-      <configuration name="ProjectMathTest.sigmoidMatrixTest" configurationId="JUnit" />
+    <history-entry file="NeuralNetTest_multiplyByScalarTest - 2018.09.14 at 11h 21m 50s.xml">
+      <configuration name="NeuralNetTest.multiplyByScalarTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProjectMathTest_sigmoidPrimeMatrixTest - 2018.09.10 at 14h 48m 20s.xml">
-      <configuration name="ProjectMathTest.sigmoidPrimeMatrixTest" configurationId="JUnit" />
+    <history-entry file="NeuralNetTest_multiplyByScalarTest - 2018.09.14 at 11h 22m 49s.xml">
+      <configuration name="NeuralNetTest.multiplyByScalarTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProjectMathTest_sigmoidPrimeMatrixTest - 2018.09.10 at 15h 06m 10s.xml">
-      <configuration name="ProjectMathTest.sigmoidPrimeMatrixTest" configurationId="JUnit" />
+    <history-entry file="NeuralNetTest_multiplyByScalarTest - 2018.09.14 at 11h 22m 54s.xml">
+      <configuration name="NeuralNetTest.multiplyByScalarTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProjectMathTest - 2018.09.10 at 15h 06m 17s.xml">
-      <configuration name="ProjectMathTest" configurationId="JUnit" />
+    <history-entry file="NeuralNetTest_multiplyByScalarTest - 2018.09.14 at 11h 23m 01s.xml">
+      <configuration name="NeuralNetTest.multiplyByScalarTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -481,12 +467,13 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49583334" weight="0.32900944" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5083333" side_tool="true" weight="0.2865566" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.25972223" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49166667" weight="0.2865566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49166667" visible="true" weight="0.2865566" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.66875" weight="0.32900944" />
       <window_info id="Capture Tool" order="2" />
@@ -504,7 +491,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49930555" weight="0.32900944" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49583334" weight="0.32900944" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
@@ -544,16 +530,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/ProjectMathTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/AIPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -984,20 +960,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/NeuralNet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/NetTrainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
-          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#541#542#0" expanded="true" />
@@ -1007,6 +973,23 @@
             <element signature="e#843#844#0" expanded="true" />
             <element signature="e#858#859#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/NeuralNet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NeuralNetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="30" column="6" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
         </state>
       </provider>
     </entry>
