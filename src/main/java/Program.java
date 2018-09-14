@@ -1,14 +1,18 @@
 import java.sql.SQLException;
-import java.util.Arrays;
+import java.util.List;
+import java.util.Vector;
+import org.la4j.Matrix;
+import org.la4j.Vectors;
+import org.la4j.iterator.MatrixIterator;
 
 public class Program {
 
-  public static final String TABLE_NAME = "GameState3";
+  public static final String TABLE_NAME = "GameStateTest";
   public static final String URL = "jdbc:sqlite:testDb.db";
-  public static final int NUM_OF_GAMES = 500;
+  public static final int NUM_OF_GAMES = 1;
 
   public static void letPlayerXPractise(int numOfGames) throws SQLException {
-    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+    DataManager trainer = new DataManager(URL,TABLE_NAME);
     for(int i = 1; i<= numOfGames; i++) {
       System.out.println("Starting game "+ i + " for player X");
       double[] weightsForX = trainer.getWeightsFromDb('X');
@@ -28,7 +32,7 @@ public class Program {
   }
 
   public static void playAgainstPlayerX() throws SQLException{
-    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+    DataManager trainer = new DataManager(URL,TABLE_NAME);
     double[] weightsForX = trainer.getWeightsFromDb('X');
     Player playerX = new AIPlayer(weightsForX);
     Player playerO = new HumanPlayer();
@@ -46,7 +50,7 @@ public class Program {
   }
 
   public static void playAgainstPlayerO() throws SQLException{
-    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+    DataManager trainer = new DataManager(URL,TABLE_NAME);
     double[] weightsForO = trainer.getWeightsFromDb('O');
     Player playerX = new HumanPlayer();
     Player playerO = new AIPlayer(weightsForO);
@@ -63,7 +67,7 @@ public class Program {
   }
 
   public static void letPlayersPractiseTogether(int numOfGames) throws SQLException{
-    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+    DataManager trainer = new DataManager(URL,TABLE_NAME);
     for(int i = 1; i<= numOfGames; i++) {
       double[] weightsForX = trainer.getWeightsFromDb('X');
       double[] weightsForO = trainer.getWeightsFromDb('O');
@@ -87,7 +91,7 @@ public class Program {
   }
 
   public static void letPlayerOPractise(int numOfGames) throws  SQLException{
-    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+    DataManager trainer = new DataManager(URL,TABLE_NAME);
     for(int i = 1; i<= numOfGames; i++) {
       System.out.println("Starting game "+ i + " for player O");
       double[] weightsForO = trainer.getWeightsFromDb('O');
@@ -107,18 +111,18 @@ public class Program {
   }
 
   public static int totalStatesVisited() throws SQLException {
-    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+    DataManager trainer = new DataManager(URL,TABLE_NAME);
     return trainer.totalStates();
   }
 
   public static int statesWonByX() throws  SQLException{
-    ModelTrainer trainer = new ModelTrainer(URL, TABLE_NAME);
+    DataManager trainer = new DataManager(URL, TABLE_NAME);
     return trainer.totalStatesWonByX();
 
   }
 
   public static int statesWonByO() throws  SQLException{
-    ModelTrainer trainer = new ModelTrainer(URL, TABLE_NAME);
+    DataManager trainer = new DataManager(URL, TABLE_NAME);
     return trainer.totalStatesWonByO();
   }
 
@@ -132,7 +136,7 @@ public class Program {
   }
 
   public static void letRandomPlayersPlayAgainstEachOther() throws SQLException {
-    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+    DataManager trainer = new DataManager(URL,TABLE_NAME);
     int victoriesOfX = 0;
     int victoriesOfO = 0;
     int ties = 0;
@@ -164,7 +168,7 @@ public class Program {
   }
 
   public static void letPlayersLearn() throws SQLException{
-    ModelTrainer trainer = new ModelTrainer(URL,TABLE_NAME);
+    DataManager trainer = new DataManager(URL,TABLE_NAME);
 
     double[] weightsForX = trainer.getWeightsFromDb('X');
     double[] weightsForO = trainer.getWeightsFromDb('O');
@@ -178,10 +182,79 @@ public class Program {
     trainer.storeWeightsIntoDb('O', betterWeightsForO);
   }
 
+  public static AIPlayer trainPlayerXWithNeuralNet() throws  SQLException{
+    DataManager trainer = new DataManager(URL,TABLE_NAME);
+    List<LabeledResult> labeledResultsForX= trainer.getLabeledResultsFromDb('X');
+
+    return null;
+  }
+
+
+
   public static void main(String[] argv) throws Exception {
 
-    playAgainstPlayerX();
-    //Unit test material
+    DataManager manager = new DataManager(URL,TABLE_NAME);
+    List<LabeledResult> results = manager.getLabeledResultsFromDb('X');
+    NetTrainer trainer = new NetTrainer(results);
+    Matrix data = trainer.data;
+    data.set(2,9,11);
+    System.out.println(data);
+    System.out.println();
+    System.out.println();
+    System.out.println(data.removeLastColumn());
+    Matrix label = data.copy();
+    for(int i = 0; i < 9; i++) label = label.removeFirstColumn();
+    System.out.println(label);
+    System.out.println(data);
+
+
+
+/*
+
+    DataManager trainer = new DataManager(URL,TABLE_NAME);
+    List<LabeledResult> labeledResultsForX= trainer.getLabeledResultsFromDb('X');
+*/
+
+    /*double[][] array1 = {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9},
+    };
+
+    double[] array = {1,2,3,};
+
+    org.la4j.Vector vector = org.la4j.Vector.fromArray(array);
+    Matrix matrix = Matrix.from2DArray(array1);
+    System.out.println(matrix);*/
+
+
+
+
+
+
+    /*
+    double[][] array2 = {
+        {1,1,1}
+    };
+
+    double[] array3 = { 1,1,1 };
+    Matrix matrix = Matrix.from2DArray(array1);
+    Matrix vector1 = Matrix.from2DArray(array2);
+    Matrix vector2 = Matrix.from1DArray(3,1,array3);
+    System.out.println(vector1);
+    System.out.println(vector2);
+    Matrix matrix2 = matrix.copy();
+    MatrixIterator iterator = matrix2.iterator();
+    while (iterator.hasNext()) {
+      double x = iterator.next();
+      double newX = 3*x;
+      iterator.set(newX);
+    }
+    System.out.println(matrix);
+    System.out.println(matrix2);
+
+*/
+
 
 
 
@@ -239,7 +312,7 @@ public class Program {
 
 /*    String url = "jdbc:sqlite:testDb.db";
     String tableName = "GameStateTest";
-    ModelTrainer trainer = new ModelTrainer(url, tableName);
+    DataManager trainer = new DataManager(url, tableName);
     int[][] someMap = {
         {0,0, 0},
         {0, 1, 0},
@@ -276,7 +349,7 @@ public class Program {
     /*
     String url = "jdbc:sqlite:testDb.db";
     String tableName = "GameStateTest";
-    ModelTrainer trainer = new ModelTrainer(url, tableName);
+    DataManager trainer = new DataManager(url, tableName);
     System.out.println("Storing the results of the game!");
     trainer.storeGameRecord(gameRecord);
 */

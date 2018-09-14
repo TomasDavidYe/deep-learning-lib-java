@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
-public class ModelTrainer {
+public class DataManager {
 
   Connection conn;
   String tableName;
@@ -16,7 +16,7 @@ public class ModelTrainer {
   public static final double CUSTOM_LEARNING_RATE =1;
   public static final int CUSTOM_NUMBER_OF_ITERATIONS = 1000;
 
-  public ModelTrainer(String url, String tableName) throws SQLException {
+  public DataManager(String url, String tableName) throws SQLException {
     conn = DriverManager.getConnection(url);
     this.tableName = tableName;
     hypothesis = (features,weights) ->{
@@ -114,10 +114,10 @@ public class ModelTrainer {
       int[] features = getFeaturesFromId(id);
       int label;
       if(playerSymbol == 'X'){
-        if (xWon/totalPlayed >= 0.5) label = 1;
+        if (xWon >= oWon ) label = 1;
         else label = 0;
       }else{
-        if(oWon/totalPlayed >= 0.5) label = 1;
+        if(oWon >= xWon) label = 1;
         else label = 0;
 
       }
@@ -128,19 +128,17 @@ public class ModelTrainer {
 
   }
 
+
+
   public int[] getFeaturesFromId(String id){
-    int[] features = new int[19];
-    features[0] = 1;
+    int[] features = new int[9];
     for(int i = 0; i < 9; i++ ){
       if(id.charAt(i) == 'X'){
-        features[i + 1] = 1;
-        features[i + 10] = 1;
+        features[i] = 1;
       } else if(id.charAt(i) == 'O'){
-        features[i+1] = -1;
-        features[i + 10] = 1;
+        features[i] = -1;
       }else{
-        features[i+1] = 0;
-        features[i + 10] = 0;
+        features[i] = 0;
       }
     }
     return features;

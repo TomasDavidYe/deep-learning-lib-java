@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
@@ -8,6 +7,7 @@ public class AIPlayer extends   Player {
 
 
     double[] weights;
+    NeuralNet neuralNet;
 
     public AIPlayer(){
       weights = new double[19];
@@ -35,7 +35,7 @@ public class AIPlayer extends   Player {
       return 1 / (1 + Math.exp(-x));
     }
 
-    public double evaluateMove(GameState gameState){
+    public double evaluateWithLinearHypothesis(GameState gameState){
       int[] features = new int[19];
       features[0] = 1;
       int index = 0;
@@ -46,6 +46,7 @@ public class AIPlayer extends   Player {
         }
       }
 
+
       for(int i = 0; i<3;i++){
         for(int j = 0; j<3; j++){
           index++;
@@ -53,6 +54,10 @@ public class AIPlayer extends   Player {
         }
       }
       return hypothesis(features);
+    }
+
+    public double evaluateWithNeuralNet(GameState gameState){
+      return 0;
     }
 
     @Override
@@ -89,7 +94,7 @@ public class AIPlayer extends   Player {
 
 
     public GameState getTheBestMove(List<GameState> possibleMoves){
-      return possibleMoves.stream().max(Comparator.comparing(state -> evaluateMove(state))).get();
+      return possibleMoves.stream().max(Comparator.comparing(state -> evaluateWithLinearHypothesis(state))).get();
     }
 
     public GameState getRandomMove(List<GameState> possibleMoves){
