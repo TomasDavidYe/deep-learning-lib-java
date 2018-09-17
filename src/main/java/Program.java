@@ -1,15 +1,16 @@
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Vector;
+import java.util.Map;
+import java.util.Random;
 import org.la4j.Matrix;
-import org.la4j.Vectors;
-import org.la4j.iterator.MatrixIterator;
+import org.la4j.Vector;
 
 public class Program {
 
   public static final String TABLE_NAME = "GameStateTest";
   public static final String URL = "jdbc:sqlite:testDb.db";
-  public static final int NUM_OF_GAMES = 1;
+  public static final int NUM_OF_GAMES = 30;
 
   public static void letPlayerXPractise(int numOfGames) throws SQLException {
     DataManager trainer = new DataManager(URL,TABLE_NAME);
@@ -182,22 +183,176 @@ public class Program {
     trainer.storeWeightsIntoDb('O', betterWeightsForO);
   }
 
-  public static AIPlayer trainPlayerXWithNeuralNet() throws  SQLException{
-    DataManager trainer = new DataManager(URL,TABLE_NAME);
-    List<LabeledResult> labeledResultsForX= trainer.getLabeledResultsFromDb('X');
+  public static void neuralNetPractiseWithRandom() throws Exception{
+    double constant = 1;
+    double learningRate = 1;
+    int numOfIter = 1000;
+    DataManager manager = new DataManager(URL,TABLE_NAME);
+    List<LabeledResult> results = manager.getLabeledResultsFromDb('O');
+    double[] array10 = new double[10];
+    double[] array1 = new double[1];
+    int numberOfLayers = 6;
 
-    return null;
+    //hidden layer sizes
+    int layer1Size = 2;
+    int layer2Size = 2;
+    int layer3Size = 2;
+    int layer4Size = 2;
+
+
+    Map<Integer,Matrix> weights = new HashMap<>();
+    Map<Integer, org.la4j.Vector> bias = new HashMap<>();
+
+
+  /*  bias.put(1, org.la4j.Vector.constant(layer1Size,constant));
+    bias.put(2, org.la4j.Vector.constant(layer2Size,constant));
+    bias.put(3, org.la4j.Vector.constant(1,constant));
+
+
+    weights.put(1,Matrix.constant(layer1Size,9,constant));
+    weights.put(2,Matrix.constant(layer2Size,layer1Size,constant ));
+    weights.put(3,Matrix.constant(1,layer2Size,constant));*/
+
+    bias.put(1, org.la4j.Vector.random(layer1Size,new Random()));
+    bias.put(2, org.la4j.Vector.random(layer2Size,new Random()));
+    bias.put(3, Vector.random(layer3Size,new Random()));
+    bias.put(4, Vector.random(layer4Size,new Random()));
+
+    bias.put(5, org.la4j.Vector.random(1, new Random()));
+
+
+    weights.put(1,Matrix.random(layer1Size,9,new Random()));
+    weights.put(2,Matrix.random(layer2Size,layer1Size,new Random() ));
+    weights.put(3,Matrix.random(layer3Size,layer2Size, new Random()));
+    weights.put(4,Matrix.random(layer4Size,layer3Size, new Random()));
+    weights.put(5,Matrix.random(1,layer4Size,new Random()));
+
+
+
+    NeuralNet initialNet = new NeuralNet(weights,bias,numberOfLayers);
+    NetTrainer trainer = new NetTrainer(results);
+    Matrix features = trainer.getFeatures();
+    Matrix labels = trainer.getLabels();
+    NeuralNet optimized = ProjectMath.optimize(initialNet,features,labels,learningRate,numOfIter);
+    int numOfExamples = results.size();
+    int correctPredictionCounter = 0;
+    for(int i = 0; i < numOfExamples; i++){
+      org.la4j.Vector x = features.getRow(i);
+      int y = (int) labels.get(i,0);
+      double hThetaX = ProjectMath.applyNetToFeatures(optimized,x);
+      if(Math.abs(y-hThetaX) <= 0.5) correctPredictionCounter++;
+      System.out.println("On the example  " + i+ "  with label  " + y + "  the model predicts  "+ hThetaX);
+    }
+    System.out.println("The model predicted  " + correctPredictionCounter +"  out of  " + numOfExamples);
+    System.out.println("Overall accuracy of the model is:  "+ ((double)correctPredictionCounter/ (double) numOfExamples) + " %");
+    return;
+  }
+
+
+  public static AIPlayer neuralNetPractise() throws Exception{
+    double const1 = -1;
+    double const2 = -1;
+    double const3 = 0.1;
+    double const4 = -0.8;
+    double const5 = -0.3;
+    double const6 = -0.3;
+    double const7 = -0.2;
+    double const8 = -0.2;
+
+    double learningRate = 0.8;
+    int numOfIter = 1000;
+    DataManager manager = new DataManager(URL,TABLE_NAME);
+    List<LabeledResult> results = manager.getLabeledResultsFromDb('O');
+    double[] array10 = new double[10];
+    double[] array1 = new double[1];
+    int numberOfLayers = 4;
+
+    //hidden layer sizes
+    int layer1Size = 30;
+    int layer2Size = 2;
+    int layer3Size = 2;
+    int layer4Size = 2;
+
+
+    Map<Integer,Matrix> weights = new HashMap<>();
+    Map<Integer, org.la4j.Vector> bias = new HashMap<>();
+
+
+    bias.put(1, org.la4j.Vector.constant(layer1Size,const1));
+    bias.put(2, org.la4j.Vector.constant(layer2Size,const2));
+   // bias.put(3, org.la4j.Vector.constant(layer3Size,const2));
+    bias.put(3, org.la4j.Vector.constant(1,const3));
+
+
+    weights.put(1,Matrix.constant(layer1Size,9,const4));
+    weights.put(2,Matrix.constant(layer2Size,layer1Size,const5));
+  //  weights.put(3,Matrix.constant(layer3Size,layer2Size,const8));
+    weights.put(3,Matrix.constant(1,layer2Size,const6));
+
+
+
+
+
+    NeuralNet initialNet = new NeuralNet(weights,bias,numberOfLayers);
+    NetTrainer trainer = new NetTrainer(results);
+    Matrix features = trainer.getFeatures();
+    Matrix labels = trainer.getLabels();
+    NeuralNet optimized = ProjectMath.optimize(initialNet,features,labels,learningRate,numOfIter);
+    int numOfExamples = results.size();
+    int correctPredictionCounter = 0;
+    for(int i = 0; i < numOfExamples; i++){
+      org.la4j.Vector x = features.getRow(i);
+      int y = (int) labels.get(i,0);
+      double hThetaX = ProjectMath.applyNetToFeatures(optimized,x);
+      if(Math.abs(y-hThetaX) <= 0.5) correctPredictionCounter++;
+      System.out.println("On the example  " + i+ "  with label  " + y + "  the model predicts  "+ hThetaX);
+    }
+    System.out.println("The model predicted  " + correctPredictionCounter +"  out of  " + numOfExamples);
+    System.out.println("Overall accuracy of the model is:  "+ ((double)correctPredictionCounter/ (double) numOfExamples) + " %");
+    return new AIPlayer(optimized);
+
   }
 
 
 
   public static void main(String[] argv) throws Exception {
+    AIPlayer aiPlayer = neuralNetPractise();
+    GameHost gameHost = new GameHost(new HumanPlayer(),aiPlayer);
+    gameHost.playASingleGame();
 
-    DataManager manager = new DataManager(URL,TABLE_NAME);
+
+/*
+    Matrix ones = Matrix.constant(3,1,1);
+    System.out.println(ones);*/
+
+
+
+
+ /*   double[] array1 =
+        {1,2,3,9};
+
+    org.la4j.Vector vec = org.la4j.Vector.fromArray(array1);
+    System.out.println(vec);
+    System.out.println(vec.blank());*/
+
+
+
+
+    /*double[] array = {1,2,3};
+    org.la4j.Vector vect = org.la4j.Vector.fromArray(array);
+    System.out.println(vect);
+    System.out.println(vect.toColumnMatrix().transpose());
+    System.out.println(vect.toColumnMatrix().transpose().sum());
+
+
+    */
+
+
+
+    /*DataManager manager = new DataManager(URL,TABLE_NAME);
     List<LabeledResult> results = manager.getLabeledResultsFromDb('X');
     NetTrainer trainer = new NetTrainer(results);
     Matrix data = trainer.data;
-    data.set(2,9,11);
     System.out.println(data);
     System.out.println();
     System.out.println();
@@ -205,7 +360,7 @@ public class Program {
     Matrix label = data.copy();
     for(int i = 0; i < 9; i++) label = label.removeFirstColumn();
     System.out.println(label);
-    System.out.println(data);
+    System.out.println(data);*/
 
 
 
@@ -215,17 +370,18 @@ public class Program {
     List<LabeledResult> labeledResultsForX= trainer.getLabeledResultsFromDb('X');
 */
 
-    /*double[][] array1 = {
+   /* double[][] array1 = {
         {1,2,3},
         {4,5,6},
         {7,8,9},
     };
 
-    double[] array = {1,2,3,};
 
-    org.la4j.Vector vector = org.la4j.Vector.fromArray(array);
-    Matrix matrix = Matrix.from2DArray(array1);
-    System.out.println(matrix);*/
+    Map<Integer,Matrix> map = new HashMap<>();
+    map.put(1,Matrix.from2DArray(array1));
+    System.out.println(map.get(1));
+    map.get(1).set(1,1,115);
+    System.out.println(map.get(1));*/
 
 
 

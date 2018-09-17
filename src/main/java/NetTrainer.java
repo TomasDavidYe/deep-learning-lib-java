@@ -27,13 +27,6 @@ public class NetTrainer {
     return label;
   }
 
-  public double Cost(NeuralNet net){
-   return 0;
-  }
-
-  public NeuralNet getGradient(NeuralNet neuralNet){
-    return null;
-  }
 
 
 

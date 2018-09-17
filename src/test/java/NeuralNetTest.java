@@ -1,5 +1,3 @@
-import static org.junit.Assert.*;
-
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.Assert;
@@ -18,7 +16,7 @@ public class NeuralNetTest {
 
 
   @Before
-  public void init() {
+  public void init() throws NeuralNetException {
     double[][] weights1ForNet1 = {
         {1, 2, 3},
         {4, 5, 6},
@@ -53,7 +51,7 @@ public class NeuralNetTest {
     Map<Integer, Vector> biasForNet1 = new HashMap<>();
     biasForNet1.put(1, Vector.fromArray(bias1ForNet1));
     biasForNet1.put(2, Vector.fromArray(bias2ForNet1));
-    net1 = new NeuralNet(weightsForNet1, biasForNet1, 2);
+    net1 = new NeuralNet(weightsForNet1, biasForNet1, 3);
 
     Map<Integer, Matrix> weightsForNet2 = new HashMap<>();
     weightsForNet2.put(1, Matrix.from2DArray(weights1ForNet2));
@@ -61,14 +59,14 @@ public class NeuralNetTest {
     Map<Integer, Vector> biasForNet2 = new HashMap<>();
     biasForNet2.put(1, Vector.fromArray(bias1ForNet2));
     biasForNet2.put(2, Vector.fromArray(bias2ForNet2));
-    net2 = new NeuralNet(weightsForNet2, biasForNet2, 2);
+    net2 = new NeuralNet(weightsForNet2, biasForNet2, 3);
 
     scalar1 = 2;
     scalar2 = 0.5;
   }
 
   @Test
-  public void addTest() {
+  public void addTest() throws NeuralNetException {
     NeuralNet result = net1.add(net2);
     for (int l = 1; l <= 2; l++) {
       for (int i = 0; i < 3; i++) {
@@ -81,9 +79,9 @@ public class NeuralNetTest {
   }
 
   @Test
-  public void multiplyByScalarTest() {
-    NeuralNet result1 = net1.multuplyByScalar(scalar1);
-    NeuralNet result2 = net2.multuplyByScalar(scalar2);
+  public void multiplyByScalarTest() throws NeuralNetException {
+    NeuralNet result1 = net1.multiplyByScalar(scalar1);
+    NeuralNet result2 = net2.multiplyByScalar(scalar2);
 
     for (int l = 1; l <= 2; l++) {
       for (int i = 0; i < 3; i++) {

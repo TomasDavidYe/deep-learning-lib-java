@@ -1,7 +1,10 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
+import org.la4j.Vector;
 
 public class AIPlayer extends   Player {
 
@@ -16,6 +19,10 @@ public class AIPlayer extends   Player {
     public AIPlayer(double[] weights){
       super();
       this.weights = weights;
+    }
+
+    public AIPlayer(NeuralNet net){
+      this.neuralNet = net;
     }
 
     public double hypothesis(int[] features){
@@ -56,14 +63,12 @@ public class AIPlayer extends   Player {
       return hypothesis(features);
     }
 
-    public double evaluateWithNeuralNet(GameState gameState){
-      return 0;
-    }
+
 
     @Override
     public GameState play(GameState gameState){
       List<GameState> possibleMoves = getPossibleMoves(gameState);
-      return getTheBestMove(possibleMoves);
+      return getBestMoveWithNeuralNet(possibleMoves);
     }
 
     public List<GameState> getPossibleMoves(GameState gameState){
@@ -93,8 +98,19 @@ public class AIPlayer extends   Player {
     }
 
 
+    public double evaluateWithNeuralNet(GameState gameState){
+      double[] array = DataManager.getFeaturesFromId(gameState.getStateInString());
+      Vector feature = Vector.fromArray(array);
+      return ProjectMath.applyNetToFeatures(neuralNet, feature);
+
+    }
+
     public GameState getTheBestMove(List<GameState> possibleMoves){
       return possibleMoves.stream().max(Comparator.comparing(state -> evaluateWithLinearHypothesis(state))).get();
+    }
+
+    public GameState getBestMoveWithNeuralNet(List<GameState> possibleMoves){
+      return  possibleMoves.stream().max(Comparator.comparing(state -> evaluateWithNeuralNet(state))).get();
     }
 
     public GameState getRandomMove(List<GameState> possibleMoves){

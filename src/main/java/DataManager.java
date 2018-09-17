@@ -30,9 +30,7 @@ public class DataManager {
   public List<GameStateRecord> produceGameStateRecordsFromGameRecord(GameRecord record){
     List<GameStateRecord> result = new ArrayList<>();
     char winningSymbol = record.getWinningSymbol();
-    record.getGameStates().forEach(gameState -> {
-      result.add(new GameStateRecord(gameState, winningSymbol));
-    });
+    record.getGameStates().forEach(gameState -> result.add(new GameStateRecord(gameState, winningSymbol)));
 
     return result;
   }
@@ -111,7 +109,7 @@ public class DataManager {
       int totalPlayed = resultSet.getInt("totalOccurrences");
       int xWon = resultSet.getInt("occurrencesWhereXWon");
       int oWon = resultSet.getInt("occurrencesWhereOWon");
-      int[] features = getFeaturesFromId(id);
+      double[] features = getFeaturesFromId(id);
       int label;
       if(playerSymbol == 'X'){
         if (xWon >= oWon ) label = 1;
@@ -130,8 +128,8 @@ public class DataManager {
 
 
 
-  public int[] getFeaturesFromId(String id){
-    int[] features = new int[9];
+  public static double[] getFeaturesFromId(String id){
+    double[] features = new double[9];
     for(int i = 0; i < 9; i++ ){
       if(id.charAt(i) == 'X'){
         features[i] = 1;
@@ -187,7 +185,7 @@ public class DataManager {
       gradient[k] = 0;
       for(LabeledResult result : results){
         int y = result.label;
-        int[] X = result.features;
+        double[] X = result.features;
         double hThetaX = hypothesis.apply(X,weights);
         double temp = (hThetaX - y) * X[k];
         gradient[k] += temp;
@@ -212,7 +210,7 @@ public class DataManager {
 
   @FunctionalInterface
   interface generalHypothesis{
-    double apply(int[] features, double[] weights);
+    double apply(double[] features, double[] weights);
   }
 
   public double[] getWeightsFromDb(char playerSymbol) throws SQLException{
