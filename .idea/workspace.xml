@@ -1,55 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec5125e5-0a72-4254-bf9c-046420e79a77" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bias1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bias2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bias3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bias4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/computedY.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/features.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/labels.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/weights1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/weights2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/weights3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/weights4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GameStateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/EnhancedAIPlayer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/GameState$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/MatPredicate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/NeuralNetwork.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ResourceReader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bias1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bias2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bias3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/bias4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/computedY.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/features.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/labels.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/weights1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/weights2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/weights3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/weights4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/GameStateTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EnhancedAIPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EnhancedAIPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NeuralNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NeuralNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Program.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/NetTrainerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/NetTrainerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ProjectMathTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ProjectMathTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-NetTrainerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-NetTrainerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-NeuralNetTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-NeuralNetTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ProjectMathTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ProjectMathTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tictactoe-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/tictactoe-1.0-SNAPSHOT.jar" afterDir="false" />
-    </list>
+    <list default="true" id="ec5125e5-0a72-4254-bf9c-046420e79a77" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -496,7 +448,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -506,9 +457,9 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5083333" side_tool="true" weight="0.2865566" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.25972223" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49166667" visible="true" weight="0.24882075" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49166667" weight="0.24882075" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.66875" weight="0.32900944" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.66875" visible="true" weight="0.32900944" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
