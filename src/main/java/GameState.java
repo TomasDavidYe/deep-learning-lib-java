@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import org.la4j.Matrix;
 
 public class GameState {
   private int[][] gameMap;
@@ -63,6 +66,20 @@ public class GameState {
     sums.add(gameMap[0][0] + gameMap[1][1] + gameMap[2][2]);
     sums.add(gameMap[0][2] + gameMap[1][1] + gameMap[2][0]);
     return sums.stream().anyMatch(num -> Math.abs(num) == 3);
+  }
+
+  public Matrix extractFeature(){
+    double[][] array = {new double[9]};
+    Map<Character, Double> charToNumber = new HashMap<Character, Double>(){
+      {
+        put('X',1.0);
+        put('.', 0.0);
+        put('O', -1.0);
+      }
+    };
+    String temp = this.getStateInString();
+    for(int i = 0; i<9; i++) array[0][i] = charToNumber.get(temp.charAt(i));
+    return Matrix.from2DArray(array);
   }
 
 

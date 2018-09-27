@@ -7,6 +7,7 @@ NetTrainer.class
 Program.class
 ResourceReader.class
 GameHost.class
+GameState$1.class
 DataManager$generalHypothesis.class
 Player.class
 ProjectMath.class

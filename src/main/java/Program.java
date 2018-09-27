@@ -331,7 +331,21 @@ public class Program {
     Map<Integer, Matrix> weights = ResourceReader.getWeightsFromFiles(numOfLayers - 1);
     Map<Integer, Matrix> biases = ResourceReader.getBiasesFromFiles(numOfLayers - 1);
     NeuralNetwork net = new NeuralNetwork(5, weights,biases);
-    Matrix temp;
+    System.out.println("Features shape = [" + features.rows() + " : "+ features.columns()+"]");
+    System.out.println("Labels shape = [" + labels.rows() + " : " + labels.columns()+"]");
+    System.out.println();
+    System.out.println();
+    Matrix temp = net.applyNetToMatrix(features);
+    int rows = temp.rows();
+    Matrix halves = Matrix.constant(rows, 1, 0.5);
+    Matrix predictions = ProjectMath.applyPredicateElementWise((a,b) -> a>=b ,temp,halves);
+    Matrix accuracy = ProjectMath.applyPredicateElementWise((a,b) -> a == b, predictions, labels);
+    System.out.println("Accuracy =  " + accuracy.sum() / rows + "%");
+
+    HumanPlayer playerX = new HumanPlayer();
+    EnhancedAIPlayer playerO = new EnhancedAIPlayer(net);
+    GameHost host = new GameHost(playerX,playerO);
+    host.playASingleGame();
 
 
 //    System.out.println("Calculating layer 2...");
@@ -361,10 +375,7 @@ public class Program {
 //    System.out.println("Output =  ");
 //    System.out.println(temp);
 
-    System.out.println("Features shape = [" + features.rows() + " : "+ features.columns()+"]");
-    System.out.println("Labels shape = [" + labels.rows() + " : " + labels.columns()+"]");
-    System.out.println();
-    System.out.println();
+
 
 //    PrintWriter out = new PrintWriter("./src/main/resources/labels.txt");
 //    out.println(labels.toCSV());
@@ -376,35 +387,28 @@ public class Program {
 
 //here is the calculation
 
-    System.out.println("Calculating layer 2...");
-    Matrix layer1Input = features;
-    Matrix transformation1 = weights.get(1);
-    temp = layer1Input.multiply(transformation1);
-    temp = ProjectMath.sigmoid(temp);
+//    Matrix layer1Input = features;
+//    Matrix transformation1 = weights.get(1);
+//    temp = layer1Input.multiply(transformation1);
+//    temp = ProjectMath.sigmoid(temp);
+//
+//    Matrix layer2input = temp;
+//    Matrix transformation2 = weights.get(2);
+//    temp = layer2input.multiply(transformation2);
+//    temp = ProjectMath.sigmoid(temp);
+//
+//    Matrix layer3input = temp;
+//    Matrix transformation3 = weights.get(3);
+//    temp = layer3input.multiply(transformation3);
+//    temp = ProjectMath.sigmoid(temp);
+//
+//    Matrix layer4Input = temp;
+//    Matrix transformation4 = weights.get(4);
+//    temp = layer4Input.multiply(transformation4);
 
-    System.out.println("Calculating layer 3...");
-    Matrix layer2input = temp;
-    Matrix transformation2 = weights.get(2);
-    temp = layer2input.multiply(transformation2);
-    temp = ProjectMath.sigmoid(temp);
+//    temp = ProjectMath.sigmoid(temp);
 
-    System.out.println("Calculating layer 4...");
-    Matrix layer3input = temp;
-    Matrix transformation3 = weights.get(3);
-    temp = layer3input.multiply(transformation3);
-    temp = ProjectMath.sigmoid(temp);
 
-    System.out.println("Calculating output layer...");
-    Matrix layer4Input = temp;
-    Matrix transformation4 = weights.get(4);
-    temp = layer4Input.multiply(transformation4);
-    temp = ProjectMath.sigmoid(temp);
-
-    int rows = temp.rows();
-    Matrix halves = Matrix.constant(rows, 1, 0.5);
-    Matrix predictions = ProjectMath.applyPredicateElementWise((a,b) -> a>=b ,temp,halves);
-    Matrix accuracy = ProjectMath.applyPredicateElementWise((a,b) -> a == b, predictions, labels);
-    System.out.println("Accuracy =  " + accuracy.sum() / rows + "%");
 
 
 
