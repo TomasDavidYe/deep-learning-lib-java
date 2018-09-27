@@ -12,7 +12,7 @@ public class NeuralNet {
   int numberOfLayers;
 
   public NeuralNet(Map<Integer,Matrix> weightMap, Map<Integer,Vector> biasMap, int numberOfLayers) throws NeuralNetException {
-    this.layerSizeMap = getNetworkStructure(weightMap,biasMap,numberOfLayers);
+    //this.layerSizeMap = getNetworkStructure(weightMap,biasMap,numberOfLayers);
     this.numberOfLayers = numberOfLayers;
     this.weightMap = weightMap;
     this.biasMap = biasMap;

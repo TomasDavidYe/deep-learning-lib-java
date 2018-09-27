@@ -2,28 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec5125e5-0a72-4254-bf9c-046420e79a77" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/NeuralNetException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/NetTrainerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/EnhancedAIPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MatPredicate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/NeuralNetwork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ResourceReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AIPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AIPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LabeledResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LabeledResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NetTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NetTrainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/NeuralNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NeuralNet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProjectMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProjectMath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/NeuralNetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/NeuralNetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NetTrainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NetTrainer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProjectMathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProjectMathTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/NeuralNet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NeuralNet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Program.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Program.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ProjectMath.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ProjectMath.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/NeuralNetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/NeuralNetTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tictactoe-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDb.db" beforeDir="false" afterPath="$PROJECT_DIR$/testDb.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/NetTrainerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/NetTrainerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/NeuralNetTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/NeuralNetTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ProjectMathTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/ProjectMathTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-NetTrainerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-NetTrainerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-NeuralNetTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-NeuralNetTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ProjectMathTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ProjectMathTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ProjectMathTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ProjectMathTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tictactoe-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/tictactoe-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,53 +36,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AIPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/AIPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="70" column="38" lean-forward="true" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
-                <element signature="e#421#422#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NetTrainerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/NetTrainerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="36" column="90" selection-start-line="36" selection-start-column="90" selection-end-line="36" selection-end-column="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DataManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2728">
-              <caret line="212" column="23" selection-start-line="212" selection-start-column="23" selection-end-line="212" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LabeledResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/LabeledResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Program.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="312" lean-forward="true" selection-start-line="312" selection-end-line="312" />
+            <state relative-caret-position="312">
+              <caret line="406" column="69" selection-start-line="406" selection-start-column="69" selection-end-line="406" selection-end-column="69" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#playAgainstPlayerX#0;class#Program#0" />
                 <element signature="method#playAgainstPlayerO#0;class#Program#0" />
                 <element signature="method#letPlayersPractiseTogether#0;class#Program#0" />
@@ -93,6 +54,36 @@
                 <element signature="method#letRandomPlayersPlayAgainstEachOther#0;class#Program#0" />
                 <element signature="method#letPlayersLearn#0;class#Program#0" />
                 <element signature="method#neuralNetPractiseWithRandom#0;class#Program#0" />
+                <element signature="method#neuralNetPractise#0;class#Program#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="features.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/features.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="computedY.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/computedY.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="labels.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/labels.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-81123" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResourceReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ResourceReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,10 +92,24 @@
       <file leaf-file-name="ProjectMath.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ProjectMath.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="141" column="34" selection-start-line="141" selection-start-column="31" selection-end-line="141" selection-end-column="34" />
+            <state relative-caret-position="426">
+              <caret line="193" column="44" lean-forward="true" selection-start-line="193" selection-start-column="44" selection-end-line="193" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#215#216#0" expanded="true" />
+                <element signature="e#264#265#0" expanded="true" />
+                <element signature="e#826#827#0" expanded="true" />
+                <element signature="e#874#875#0" expanded="true" />
+                <element signature="e#925#926#0" expanded="true" />
+                <element signature="e#973#974#0" expanded="true" />
+                <element signature="e#1016#1017#0" expanded="true" />
+                <element signature="e#1055#1056#0" expanded="true" />
+                <element signature="e#1103#1104#0" expanded="true" />
+                <element signature="e#1148#1149#0" expanded="true" />
+                <element signature="e#6244#6245#0" expanded="true" />
+                <element signature="e#6292#6293#0" expanded="true" />
+                <element signature="e#6335#6336#0" expanded="true" />
+                <element signature="e#6367#6368#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,9 +120,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -143,17 +148,21 @@
         <option value="$PROJECT_DIR$/src/main/java/GameHost.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/ProjectMathTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ModelTrainer.java" />
         <option value="$PROJECT_DIR$/src/main/java/NeuralNetException.java" />
         <option value="$PROJECT_DIR$/src/main/java/NetTrainer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/NeuralNet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ProjectMath.java" />
         <option value="$PROJECT_DIR$/src/test/java/NeuralNetTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/LabeledResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/NetTrainerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/AIPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/NeuralNet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ResourceReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/NeuralNetwork.java" />
+        <option value="$PROJECT_DIR$/src/main/java/EnhancedAIPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MatPredicate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ProjectMath.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ProjectMathTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Program.java" />
       </list>
     </option>
@@ -187,8 +196,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="813" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -196,6 +206,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,6 +238,13 @@
               <item name="tictactoe" type="b2602c69:ProjectViewProjectNode" />
               <item name="tictactoe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tictactoe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tictactoe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -238,9 +258,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,6 +271,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -277,12 +297,12 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="NetTrainerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectMathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tictactoe" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NetTrainerTest" />
+      <option name="MAIN_CLASS_NAME" value="ProjectMathTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -294,13 +314,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="NetTrainerTest.getLabels" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectMathTest.appendRowOfOnesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tictactoe" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NetTrainerTest" />
-      <option name="METHOD_NAME" value="getLabels" />
+      <option name="MAIN_CLASS_NAME" value="ProjectMathTest" />
+      <option name="METHOD_NAME" value="appendRowOfOnesTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -311,14 +331,14 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="NeuralNetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectMathTest.appendRowTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tictactoe" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NeuralNetTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="ProjectMathTest" />
+      <option name="METHOD_NAME" value="appendRowTest" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -328,14 +348,14 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ProjectMathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectMathTest.applyPredicateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tictactoe" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ProjectMathTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="applyPredicateTest" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -385,18 +405,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Program" />
-      <item itemvalue="JUnit.NetTrainerTest.getLabels" />
-      <item itemvalue="JUnit.NetTrainerTest" />
-      <item itemvalue="JUnit.NeuralNetTest" />
+      <item itemvalue="JUnit.ProjectMathTest.appendRowTest" />
+      <item itemvalue="JUnit.ProjectMathTest.appendRowOfOnesTest" />
       <item itemvalue="JUnit.ProjectMathTest" />
+      <item itemvalue="JUnit.ProjectMathTest.applyPredicateTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Program" />
-        <item itemvalue="JUnit.NetTrainerTest" />
-        <item itemvalue="JUnit.NeuralNetTest" />
+        <item itemvalue="JUnit.ProjectMathTest.applyPredicateTest" />
         <item itemvalue="JUnit.ProjectMathTest" />
-        <item itemvalue="JUnit.NetTrainerTest.getLabels" />
+        <item itemvalue="JUnit.ProjectMathTest.appendRowOfOnesTest" />
+        <item itemvalue="JUnit.ProjectMathTest.appendRowTest" />
       </list>
     </recent_temporary>
   </component>
@@ -414,35 +434,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="NetTrainerTest - 2018.09.16 at 11h 57m 14s.xml">
-      <configuration name="NetTrainerTest" configurationId="JUnit" />
+    <history-entry file="ProjectMathTest_appendRowOfOnesTest - 2018.09.27 at 09h 29m 50s.xml">
+      <configuration name="ProjectMathTest.appendRowOfOnesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NetTrainerTest - 2018.09.17 at 12h 59m 00s.xml">
-      <configuration name="NetTrainerTest" configurationId="JUnit" />
+    <history-entry file="ProjectMathTest_appendRowOfOnesTest - 2018.09.27 at 09h 30m 07s.xml">
+      <configuration name="ProjectMathTest.appendRowOfOnesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NeuralNetTest - 2018.09.17 at 12h 59m 07s.xml">
-      <configuration name="NeuralNetTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NeuralNetTest - 2018.09.17 at 12h 59m 56s.xml">
-      <configuration name="NeuralNetTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NeuralNetTest - 2018.09.17 at 13h 00m 00s.xml">
-      <configuration name="NeuralNetTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProjectMathTest - 2018.09.17 at 13h 01m 04s.xml">
+    <history-entry file="ProjectMathTest - 2018.09.27 at 09h 30m 11s.xml">
       <configuration name="ProjectMathTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NeuralNetTest - 2018.09.17 at 13h 01m 12s.xml">
-      <configuration name="NeuralNetTest" configurationId="JUnit" />
+    <history-entry file="ProjectMathTest - 2018.09.27 at 09h 36m 05s.xml">
+      <configuration name="ProjectMathTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NeuralNetTest - 2018.09.17 at 13h 02m 13s.xml">
-      <configuration name="NeuralNetTest" configurationId="JUnit" />
+    <history-entry file="ProjectMathTest - 2018.09.27 at 11h 12m 47s.xml">
+      <configuration name="ProjectMathTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NetTrainerTest - 2018.09.17 at 13h 06m 53s.xml">
-      <configuration name="NetTrainerTest" configurationId="JUnit" />
+    <history-entry file="ProjectMathTest_applyPredicateTest - 2018.09.27 at 11h 22m 42s.xml">
+      <configuration name="ProjectMathTest.applyPredicateTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NetTrainerTest - 2018.09.17 at 13h 07m 27s.xml">
-      <configuration name="NetTrainerTest" configurationId="JUnit" />
+    <history-entry file="ProjectMathTest_applyPredicateTest - 2018.09.27 at 11h 22m 49s.xml">
+      <configuration name="ProjectMathTest.applyPredicateTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProjectMathTest_applyPredicateTest - 2018.09.27 at 11h 23m 11s.xml">
+      <configuration name="ProjectMathTest.applyPredicateTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProjectMathTest_applyPredicateTest - 2018.09.27 at 11h 23m 24s.xml">
+      <configuration name="ProjectMathTest.applyPredicateTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProjectMathTest_applyPredicateTest - 2018.09.27 at 11h 23m 38s.xml">
+      <configuration name="ProjectMathTest.applyPredicateTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -457,12 +477,13 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5083333" side_tool="true" weight="0.2865566" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.25972223" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49166667" visible="true" weight="0.2865566" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49166667" weight="0.24882075" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.66875" weight="0.32900944" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.66875" visible="true" weight="0.32900944" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49930555" weight="0.32900944" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -474,24 +495,23 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49930555" weight="0.32900944" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49930555" weight="0.32900944" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49166667" weight="0.2865566" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49930555" weight="0.32900944" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.73125" weight="0.39976415" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.66875" visible="true" weight="0.32900944" />
@@ -499,7 +519,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49583334" weight="0.32900944" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.25972223" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -510,7 +530,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -523,209 +543,14 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GameHost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DataManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2640">
-          <caret line="177" column="27" selection-start-line="177" selection-start-column="27" selection-end-line="177" selection-end-column="27" />
-          <folding>
-            <element signature="method#playAgainstPlayerX#0;class#Program#0" />
-            <element signature="method#playAgainstPlayerO#0;class#Program#0" />
-            <element signature="method#letPlayersPractiseTogether#0;class#Program#0" />
-            <element signature="method#letPlayerOPractise#0;class#Program#0" />
-            <element signature="method#totalStatesVisited#0;class#Program#0" />
-            <element signature="method#statesWonByX#0;class#Program#0" />
-            <element signature="method#statesWonByO#0;class#Program#0" />
-            <element signature="method#eachPlayerPracticesOnHisOwn#0;class#Program#0" />
-            <element signature="method#letRandomPlayersPlayAgainstEachOther#0;class#Program#0" />
-            <element signature="method#letPlayersLearn#0;class#Program#0" />
-            <element signature="method#neuralNetPractiseWithRandom#0;class#Program#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/NeuralNet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GameRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AIPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="58" column="61" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GameHost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DataManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GameRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AIPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="44" column="45" lean-forward="true" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2640">
-          <caret line="177" column="27" lean-forward="true" selection-start-line="177" selection-start-column="27" selection-end-line="177" selection-end-column="27" />
-          <folding>
-            <element signature="method#playAgainstPlayerX#0;class#Program#0" />
-            <element signature="method#playAgainstPlayerO#0;class#Program#0" />
-            <element signature="method#letPlayersPractiseTogether#0;class#Program#0" />
-            <element signature="method#letPlayerOPractise#0;class#Program#0" />
-            <element signature="method#totalStatesVisited#0;class#Program#0" />
-            <element signature="method#statesWonByX#0;class#Program#0" />
-            <element signature="method#statesWonByO#0;class#Program#0" />
-            <element signature="method#eachPlayerPracticesOnHisOwn#0;class#Program#0" />
-            <element signature="method#letRandomPlayersPlayAgainstEachOther#0;class#Program#0" />
-            <element signature="method#letPlayersLearn#0;class#Program#0" />
-            <element signature="method#neuralNetPractiseWithRandom#0;class#Program#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Hypothesis.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/HumanPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="56" lean-forward="true" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GameHost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-          <folding>
-            <element signature="method#playAgainstPlayerX#0;class#Program#0" />
-            <element signature="method#playAgainstPlayerO#0;class#Program#0" />
-            <element signature="method#letPlayersPractiseTogether#0;class#Program#0" />
-            <element signature="method#letPlayerOPractise#0;class#Program#0" />
-            <element signature="method#totalStatesVisited#0;class#Program#0" />
-            <element signature="method#statesWonByX#0;class#Program#0" />
-            <element signature="method#statesWonByO#0;class#Program#0" />
-            <element signature="method#eachPlayerPracticesOnHisOwn#0;class#Program#0" />
-            <element signature="method#letRandomPlayersPlayAgainstEachOther#0;class#Program#0" />
-            <element signature="method#letPlayersLearn#0;class#Program#0" />
-            <element signature="method#neuralNetPractiseWithRandom#0;class#Program#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/AIPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -756,6 +581,7 @@
         <state relative-caret-position="225">
           <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#playAgainstPlayerX#0;class#Program#0" />
             <element signature="method#playAgainstPlayerO#0;class#Program#0" />
             <element signature="method#letPlayersPractiseTogether#0;class#Program#0" />
@@ -767,6 +593,7 @@
             <element signature="method#letRandomPlayersPlayAgainstEachOther#0;class#Program#0" />
             <element signature="method#letPlayersLearn#0;class#Program#0" />
             <element signature="method#neuralNetPractiseWithRandom#0;class#Program#0" />
+            <element signature="method#neuralNetPractise#0;class#Program#0" />
           </folding>
         </state>
       </provider>
@@ -778,28 +605,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GameState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#141#142#0" expanded="true" />
-            <element signature="e#165#166#0" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
-            <element signature="e#233#234#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -840,13 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/la4j/la4j/0.6.0/la4j-0.6.0.jar!/org/la4j/Matrix.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/la4j/la4j/0.6.0/la4j-0.6.0.jar!/org/la4j/operation/MatrixOperation.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -865,16 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GameHost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,44 +689,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/NeuralNet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/NeuralNetTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="59" column="55" lean-forward="true" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ProjectMathTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LabeledResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DataManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2728">
-          <caret line="212" column="23" selection-start-line="212" selection-start-column="23" selection-end-line="212" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -945,33 +703,205 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AIPlayer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DataManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="70" column="38" lean-forward="true" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+        <state relative-caret-position="3060">
+          <caret line="212" column="23" selection-start-line="212" selection-start-column="23" selection-end-line="212" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/src.zip!/java/lang/Double.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="536" column="25" selection-start-line="536" selection-start-column="25" selection-end-line="536" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/weightsAfter.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/LabeledResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/NeuralNet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="11" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/NeuralNetwork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GameHost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/AIPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/EnhancedAIPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/weights2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/weights3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/weights4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/weights1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bias2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bias3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bias4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/la4j/la4j/0.6.0/la4j-0.6.0.jar!/org/la4j/matrix/functor/MatrixFunction.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bias1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/labels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81123" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/features.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/computedY.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ResourceReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/la4j/la4j/0.6.0/la4j-0.6.0.jar!/org/la4j/LinearAlgebra.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="83" column="78" selection-start-line="83" selection-start-column="52" selection-end-line="83" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/la4j/la4j/0.6.0/la4j-0.6.0.jar!/org/la4j/Matrix.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="443" column="48" selection-start-line="443" selection-start-column="48" selection-end-line="443" selection-end-column="48" />
+          <folding>
+            <element signature="e#13552#13553#0" expanded="true" />
+            <element signature="e#13635#13636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MatPredicate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="35" lean-forward="true" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ProjectMathTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="134" column="10" selection-start-line="134" selection-start-column="10" selection-end-line="134" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/la4j/la4j/0.6.0/la4j-0.6.0.jar!/org/la4j/matrix/functor/MatrixPredicate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ProjectMath.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="141" column="34" selection-start-line="141" selection-start-column="31" selection-end-line="141" selection-end-column="34" />
+        <state relative-caret-position="426">
+          <caret line="193" column="44" lean-forward="true" selection-start-line="193" selection-start-column="44" selection-end-line="193" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#925#926#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1148#1149#0" expanded="true" />
+            <element signature="e#6244#6245#0" expanded="true" />
+            <element signature="e#6292#6293#0" expanded="true" />
+            <element signature="e#6335#6336#0" expanded="true" />
+            <element signature="e#6367#6368#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="312" lean-forward="true" selection-start-line="312" selection-end-line="312" />
+        <state relative-caret-position="312">
+          <caret line="406" column="69" selection-start-line="406" selection-start-column="69" selection-end-line="406" selection-end-column="69" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#playAgainstPlayerX#0;class#Program#0" />
             <element signature="method#playAgainstPlayerO#0;class#Program#0" />
             <element signature="method#letPlayersPractiseTogether#0;class#Program#0" />
@@ -983,6 +913,7 @@
             <element signature="method#letRandomPlayersPlayAgainstEachOther#0;class#Program#0" />
             <element signature="method#letPlayersLearn#0;class#Program#0" />
             <element signature="method#neuralNetPractiseWithRandom#0;class#Program#0" />
+            <element signature="method#neuralNetPractise#0;class#Program#0" />
           </folding>
         </state>
       </provider>

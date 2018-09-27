@@ -1,10 +1,42 @@
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Vector;
+import java.util.function.Predicate;
+import javax.naming.OperationNotSupportedException;
 import org.la4j.Matrix;
 import org.la4j.iterator.MatrixIterator;
+import org.la4j.matrix.functor.MatrixPredicate;
 
 public class ProjectMath {
+
+  public static org.la4j.Vector ones(int size){
+    return org.la4j.Vector.constant(size,1);
+  }
+
+  public static Matrix appendColumn(Matrix A, org.la4j.Vector v){
+    Matrix result = Matrix.zero(A.rows(), A.columns() + 1);
+    result.setColumn(0,v);
+    for(int k = 1; k <= A.columns(); k++){
+      result.setColumn(k,A.getColumn(k-1));
+    }
+    return result;
+  }
+
+  public static Matrix appendRow(Matrix A, org.la4j.Vector v){
+    Matrix result = Matrix.zero(A.rows() + 1, A.columns());
+    result.setRow(0,v);
+    for(int k = 1; k <= A.rows(); k++) {
+      result.setRow(k, A.getRow(k - 1));
+    }
+    return result;
+  }
+
+  public static Matrix appendColumnOfOnes(Matrix A){
+    return appendColumn(A, ones(A.rows()));
+  }
+
+  public static Matrix appendRowOfOnes(Matrix A){
+    return appendRow(A, ones(A.columns()));
+  }
 
   public static double sigmoid(double x){
     return 1 / (1 + Math.exp(-x));
@@ -83,7 +115,7 @@ public class ProjectMath {
         //recursively compute the rest of the deltas going down...
         Matrix prevDelta = deltas.get(l+1);
         Matrix currentA = A.get(l);
-        Matrix sigmoidFactor = currentA.hadamardProduct(ones(currentA.rows()).subtract(currentA));
+        Matrix sigmoidFactor = currentA.hadamardProduct(onesMat(currentA.rows()).subtract(currentA));
         Matrix weightsTrans = net.weightMap.get(l).transpose();
         Matrix temp = weightsTrans.multiply(prevDelta).hadamardProduct(sigmoidFactor);
         deltas.put(l,temp);
@@ -147,13 +179,34 @@ public class ProjectMath {
     return result.get(0,0);
   }
 
-  public static Matrix ones(int rows, int columns){
+  public static Matrix onesMat(int rows, int columns){
     return Matrix.constant(rows,columns,1);
   }
 
-  public static Matrix ones(int rows){
-    return ones(rows,1);
+  public static Matrix onesMat(int rows){
+    return onesMat(rows,1);
   }
 
 
+  public static Matrix applyPredicateElementWise(MatPredicate predicate, Matrix A, Matrix B) throws OperationNotSupportedException {
+    if(A.rows() != B.rows() || A.columns() != B.columns()) throw new OperationNotSupportedException("Matrices have to be of the same type");
+    MatrixIterator iteratorA = A.iterator();
+    MatrixIterator iteratorB = B.iterator();
+    Matrix result = A.copy();
+    MatrixIterator iteratorResult = result.iterator();
+    while (iteratorA.hasNext()){
+      iteratorResult.next();
+      double a = iteratorA.next();
+      double b = iteratorB.next();
+      if(predicate.test(a,b)) iteratorResult.set(1);
+      else iteratorResult.set(0);
+    }
+    return result;
+  }
+
+
+
+
+
 }
+

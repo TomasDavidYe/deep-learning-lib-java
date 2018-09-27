@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="ProjectMathTest" time="0.012" errors="0" skipped="0">
+<testsuite tests="9" failures="0" name="ProjectMathTest" time="0.086" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/jre/lib"/>
@@ -65,8 +65,13 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|sap.corp|*.sap.corp|corp.sap|*.corp.sap"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="ProjectMathTest" name="sigmoidTest" time="0.002"/>
-  <testcase classname="ProjectMathTest" name="sigmoidMatrixTest" time="0.01"/>
+  <testcase classname="ProjectMathTest" name="sigmoidTest" time="0.012"/>
+  <testcase classname="ProjectMathTest" name="sigmoidMatrixTest" time="0.001"/>
+  <testcase classname="ProjectMathTest" name="appendRowOfOnesTest" time="0.028"/>
+  <testcase classname="ProjectMathTest" name="applyPredicateTest" time="0.045"/>
+  <testcase classname="ProjectMathTest" name="appendColumnTest" time="0"/>
+  <testcase classname="ProjectMathTest" name="appendRowTest" time="0"/>
   <testcase classname="ProjectMathTest" name="sigmoidPrimeMatrixTest" time="0"/>
+  <testcase classname="ProjectMathTest" name="appendColumnOfOnesTest" time="0"/>
   <testcase classname="ProjectMathTest" name="sigmoidPrimeTest" time="0"/>
 </testsuite>

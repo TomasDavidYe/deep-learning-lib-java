@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
@@ -5,10 +6,12 @@ import java.util.Map;
 import java.util.Random;
 import org.la4j.Matrix;
 import org.la4j.Vector;
+import org.la4j.matrix.functor.MatrixFunction;
+import sun.nio.ch.Net;
 
 public class Program {
 
-  public static final String TABLE_NAME = "GameStateTest";
+  public static final String TABLE_NAME = "GameState3";
   public static final String URL = "jdbc:sqlite:testDb.db";
   public static final int NUM_OF_GAMES = 30;
 
@@ -259,8 +262,8 @@ public class Program {
     double const7 = -0.2;
     double const8 = -0.2;
 
-    double learningRate = 0.8;
-    int numOfIter = 1000;
+    double learningRate = 0.3;
+    int numOfIter = 100;
     DataManager manager = new DataManager(URL,TABLE_NAME);
     List<LabeledResult> results = manager.getLabeledResultsFromDb('O');
     double[] array10 = new double[10];
@@ -314,16 +317,112 @@ public class Program {
   }
 
 
-
   public static void main(String[] argv) throws Exception {
-    AIPlayer aiPlayer = neuralNetPractise();
-    GameHost gameHost = new GameHost(new HumanPlayer(),aiPlayer);
-    gameHost.playASingleGame();
+
+    System.out.println("Initializing...");
+    int numOfLayers = 5;
+    DataManager manager = new DataManager(URL,TABLE_NAME);
+    List<LabeledResult> results = manager.getLabeledResultsFromDb('O');
+    NetTrainer trainer = new NetTrainer(results);
+    Matrix features = trainer.getFeatures();
+    Matrix labels = trainer.getLabels();
+    int numOfExamples = features.rows();
+    int numOfFeatures = features.columns();
+    Map<Integer, Matrix> weights = ResourceReader.getWeightsFromFiles(numOfLayers - 1);
+    Map<Integer, Matrix> biases = ResourceReader.getBiasesFromFiles(numOfLayers - 1);
+    NeuralNetwork net = new NeuralNetwork(5, weights,biases);
+    Matrix temp;
 
 
+//    System.out.println("Calculating layer 2...");
+//    Matrix layer1Input = ProjectMath.appendColumnOfOnes(features);
+//    Matrix transformation1 = ProjectMath.appendRow(weights.get(1), biases.get(1).getColumn(0));
+//    temp = layer1Input.multiply(transformation1);
+//    temp = ProjectMath.sigmoid(temp);
+//
+//    System.out.println("Calculating layer 3...");
+//    Matrix layer2input = ProjectMath.appendColumnOfOnes(temp);
+//    Matrix transformation2 = ProjectMath.appendRow(weights.get(2), biases.get(2).getColumn(0));
+//    temp = layer2input.multiply(transformation2);
+//    temp = ProjectMath.sigmoid(temp);
+//
+//    System.out.println("Calculating layer 4...");
+//    Matrix layer3input = ProjectMath.appendColumnOfOnes(temp);
+//    Matrix transformation3 = ProjectMath.appendRow(weights.get(3), biases.get(3).getColumn(0));
+//    temp = layer3input.multiply(transformation3);
+//    temp = ProjectMath.sigmoid(temp);
+//
+//    System.out.println("Calculating output layer...");
+//    Matrix layer4Input = ProjectMath.appendColumnOfOnes(temp);
+//    Matrix transformation4 = ProjectMath.appendRow(weights.get(4), biases.get(4).getColumn(0));
+//    temp = layer4Input.multiply(transformation4);
+//    temp = ProjectMath.sigmoid(temp);
+//
+//    System.out.println("Output =  ");
+//    System.out.println(temp);
+
+    System.out.println("Features shape = [" + features.rows() + " : "+ features.columns()+"]");
+    System.out.println("Labels shape = [" + labels.rows() + " : " + labels.columns()+"]");
+    System.out.println();
+    System.out.println();
+
+//    PrintWriter out = new PrintWriter("./src/main/resources/labels.txt");
+//    out.println(labels.toCSV());
+//    out.close();
+//
+//    out = new PrintWriter("./src/main/resources/features.txt");
+//    out.println(features.toCSV());
+//    out.close();
+
+//here is the calculation
+
+    System.out.println("Calculating layer 2...");
+    Matrix layer1Input = features;
+    Matrix transformation1 = weights.get(1);
+    temp = layer1Input.multiply(transformation1);
+    temp = ProjectMath.sigmoid(temp);
+
+    System.out.println("Calculating layer 3...");
+    Matrix layer2input = temp;
+    Matrix transformation2 = weights.get(2);
+    temp = layer2input.multiply(transformation2);
+    temp = ProjectMath.sigmoid(temp);
+
+    System.out.println("Calculating layer 4...");
+    Matrix layer3input = temp;
+    Matrix transformation3 = weights.get(3);
+    temp = layer3input.multiply(transformation3);
+    temp = ProjectMath.sigmoid(temp);
+
+    System.out.println("Calculating output layer...");
+    Matrix layer4Input = temp;
+    Matrix transformation4 = weights.get(4);
+    temp = layer4Input.multiply(transformation4);
+    temp = ProjectMath.sigmoid(temp);
+
+    int rows = temp.rows();
+    Matrix halves = Matrix.constant(rows, 1, 0.5);
+    Matrix predictions = ProjectMath.applyPredicateElementWise((a,b) -> a>=b ,temp,halves);
+    Matrix accuracy = ProjectMath.applyPredicateElementWise((a,b) -> a == b, predictions, labels);
+    System.out.println("Accuracy =  " + accuracy.sum() / rows + "%");
+
+
+
+
+
+
+    //Matrix weights = ResourceReader.readMatrixFromCSV("./src/main/resources/weightsAfter.txt");
+
+   /* DataManager manager = new DataManager(URL,TABLE_NAME);
+    List<LabeledResult> results = manager.getLabeledResultsFromDb('O');
+    NetTrainer trainer = new NetTrainer(results);
+    Matrix features = trainer.getFeatures();
+    PrintWriter out = new PrintWriter("features.txt");
+    out.println(features.toCSV());
+    out.close();*/
 /*
-    Matrix ones = Matrix.constant(3,1,1);
-    System.out.println(ones);*/
+    Matrix onesMat = Matrix.constant(3,1,1);
+    System.out.println(onesMat);*/
 
 
 
