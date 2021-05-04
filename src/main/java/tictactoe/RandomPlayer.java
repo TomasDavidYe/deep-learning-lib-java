@@ -1,3 +1,7 @@
+package tictactoe;
+
+import tictactoe.AIPlayer;
+
 import java.util.List;
 
 public class RandomPlayer extends AIPlayer {

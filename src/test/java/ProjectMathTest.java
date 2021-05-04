@@ -3,6 +3,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.la4j.Matrix;
 import org.la4j.Vector;
+import utils.MatPredicate;
+import utils.ProjectMath;
 
 public class ProjectMathTest {
 
@@ -32,7 +34,7 @@ public class ProjectMathTest {
     Assert.assertEquals(0.5, ProjectMath.sigmoid(0),DELTA);
     Assert.assertEquals(0.26894, ProjectMath.sigmoid(-1), DELTA);
     Assert.assertEquals(0.73105, ProjectMath.sigmoid(1), DELTA);
-    Assert.assertEquals(0.99331,ProjectMath.sigmoid(5),DELTA);
+    Assert.assertEquals(0.99331, ProjectMath.sigmoid(5),DELTA);
     Assert.assertEquals(0.00669, ProjectMath.sigmoid(-5),DELTA);
     Assert.assertEquals(0.99995, ProjectMath.sigmoid(10),DELTA);
     Assert.assertEquals(0.00005, ProjectMath.sigmoid(-10),DELTA);
@@ -122,7 +124,7 @@ public class ProjectMathTest {
   @org.junit.Test
   public void applyPredicateTest() throws OperationNotSupportedException {
 
-    MatPredicate predicate1 = (a,b) -> a >= b;
+    MatPredicate predicate1 = (a, b) -> a >= b;
     MatPredicate predicate2 = (a,b) -> a -1 == b;
 
     double[][] array1 = {

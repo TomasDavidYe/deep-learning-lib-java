@@ -1,5 +1,11 @@
+import machinelearning.LabeledResult;
+import machinelearning.NetTrainer;
+import machinelearning.NeuralNet;
 import org.la4j.Matrix;
 import org.la4j.Vector;
+import tictactoe.*;
+import utils.DataManager;
+import utils.ProjectMath;
 
 import java.sql.SQLException;
 import java.util.HashMap;

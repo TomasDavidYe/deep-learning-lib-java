@@ -1,3 +1,9 @@
+package utils;
+
+import machinelearning.LabeledResult;
+import tictactoe.GameRecord;
+import tictactoe.GameStateRecord;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

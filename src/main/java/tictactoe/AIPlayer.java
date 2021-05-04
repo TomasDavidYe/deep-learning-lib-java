@@ -1,10 +1,16 @@
+package tictactoe;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
-import org.la4j.Vector;
 
-public class AIPlayer extends   Player {
+import machinelearning.NeuralNet;
+import org.la4j.Vector;
+import utils.DataManager;
+import utils.ProjectMath;
+
+public class AIPlayer extends Player {
 
 
     double[] weights;

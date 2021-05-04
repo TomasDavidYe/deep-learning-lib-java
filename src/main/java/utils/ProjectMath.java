@@ -1,6 +1,11 @@
+package utils;
+
 import java.util.HashMap;
 import java.util.Map;
 import javax.naming.OperationNotSupportedException;
+
+import machinelearning.NeuralNet;
+import machinelearning.NeuralNetException;
 import org.la4j.Matrix;
 import org.la4j.iterator.MatrixIterator;
 
@@ -90,7 +95,7 @@ public class ProjectMath {
     return (result.sum()) / numOfExamples;
   }
 
-  public static NeuralNet getGradient(NeuralNet net, Matrix features, Matrix labels) throws NeuralNetException{
+  public static NeuralNet getGradient(NeuralNet net, Matrix features, Matrix labels) throws NeuralNetException {
     int numberOfLayers = net.numberOfLayers;
     int numOfExamples = features.rows();
     NeuralNet result = getBlankNetOfSameShape(net);

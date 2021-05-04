@@ -1,4 +1,8 @@
+package machinelearning;
+
 import java.util.List;
+
+import machinelearning.LabeledResult;
 import org.la4j.Matrix;
 
 public class NetTrainer {

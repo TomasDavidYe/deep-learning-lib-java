@@ -1,3 +1,5 @@
+package tictactoe;
+
 public class GameStateRecord {
   private GameState gameState;
   private char winningSymbol;

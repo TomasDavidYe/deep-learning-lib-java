@@ -1,6 +1,11 @@
+package tictactoe;
+
+import tictactoe.GameState;
+import tictactoe.Player;
+
 import java.util.Scanner;
 
-public class HumanPlayer extends Player{
+public class HumanPlayer extends Player {
 
     @Override
     public GameState play(GameState gameState){

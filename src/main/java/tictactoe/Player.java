@@ -1,3 +1,5 @@
+package tictactoe;
+
 public abstract class Player {
    abstract GameState play(GameState gameState);
    protected char playerSymbol;

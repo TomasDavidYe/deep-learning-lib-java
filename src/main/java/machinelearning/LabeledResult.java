@@ -1,7 +1,9 @@
+package machinelearning;
+
 public class LabeledResult {
-  double[] features;
-  int label;
-  String id;
+  public double[] features;
+  public int label;
+  public String id;
 
   public LabeledResult(double[] features, int label, String id){
     this.features = features;

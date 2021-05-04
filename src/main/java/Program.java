@@ -1,13 +1,19 @@
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+
+import machinelearning.LabeledResult;
+import machinelearning.NetTrainer;
+import machinelearning.NeuralNet;
+import machinelearning.NeuralNetwork;
 import org.la4j.Matrix;
 import org.la4j.Vector;
-import org.la4j.matrix.functor.MatrixFunction;
-import sun.nio.ch.Net;
+import tictactoe.*;
+import utils.DataManager;
+import utils.ProjectMath;
+import utils.ResourceReader;
 
 public class Program {
 
@@ -349,28 +355,28 @@ public class Program {
 
 
 //    System.out.println("Calculating layer 2...");
-//    Matrix layer1Input = ProjectMath.appendColumnOfOnes(features);
-//    Matrix transformation1 = ProjectMath.appendRow(weights.get(1), biases.get(1).getColumn(0));
+//    Matrix layer1Input = utils.ProjectMath.appendColumnOfOnes(features);
+//    Matrix transformation1 = utils.ProjectMath.appendRow(weights.get(1), biases.get(1).getColumn(0));
 //    temp = layer1Input.multiply(transformation1);
-//    temp = ProjectMath.sigmoid(temp);
+//    temp = utils.ProjectMath.sigmoid(temp);
 //
 //    System.out.println("Calculating layer 3...");
-//    Matrix layer2input = ProjectMath.appendColumnOfOnes(temp);
-//    Matrix transformation2 = ProjectMath.appendRow(weights.get(2), biases.get(2).getColumn(0));
+//    Matrix layer2input = utils.ProjectMath.appendColumnOfOnes(temp);
+//    Matrix transformation2 = utils.ProjectMath.appendRow(weights.get(2), biases.get(2).getColumn(0));
 //    temp = layer2input.multiply(transformation2);
-//    temp = ProjectMath.sigmoid(temp);
+//    temp = utils.ProjectMath.sigmoid(temp);
 //
 //    System.out.println("Calculating layer 4...");
-//    Matrix layer3input = ProjectMath.appendColumnOfOnes(temp);
-//    Matrix transformation3 = ProjectMath.appendRow(weights.get(3), biases.get(3).getColumn(0));
+//    Matrix layer3input = utils.ProjectMath.appendColumnOfOnes(temp);
+//    Matrix transformation3 = utils.ProjectMath.appendRow(weights.get(3), biases.get(3).getColumn(0));
 //    temp = layer3input.multiply(transformation3);
-//    temp = ProjectMath.sigmoid(temp);
+//    temp = utils.ProjectMath.sigmoid(temp);
 //
 //    System.out.println("Calculating output layer...");
-//    Matrix layer4Input = ProjectMath.appendColumnOfOnes(temp);
-//    Matrix transformation4 = ProjectMath.appendRow(weights.get(4), biases.get(4).getColumn(0));
+//    Matrix layer4Input = utils.ProjectMath.appendColumnOfOnes(temp);
+//    Matrix transformation4 = utils.ProjectMath.appendRow(weights.get(4), biases.get(4).getColumn(0));
 //    temp = layer4Input.multiply(transformation4);
-//    temp = ProjectMath.sigmoid(temp);
+//    temp = utils.ProjectMath.sigmoid(temp);
 //
 //    System.out.println("Output =  ");
 //    System.out.println(temp);
@@ -390,23 +396,23 @@ public class Program {
 //    Matrix layer1Input = features;
 //    Matrix transformation1 = weights.get(1);
 //    temp = layer1Input.multiply(transformation1);
-//    temp = ProjectMath.sigmoid(temp);
+//    temp = utils.ProjectMath.sigmoid(temp);
 //
 //    Matrix layer2input = temp;
 //    Matrix transformation2 = weights.get(2);
 //    temp = layer2input.multiply(transformation2);
-//    temp = ProjectMath.sigmoid(temp);
+//    temp = utils.ProjectMath.sigmoid(temp);
 //
 //    Matrix layer3input = temp;
 //    Matrix transformation3 = weights.get(3);
 //    temp = layer3input.multiply(transformation3);
-//    temp = ProjectMath.sigmoid(temp);
+//    temp = utils.ProjectMath.sigmoid(temp);
 //
 //    Matrix layer4Input = temp;
 //    Matrix transformation4 = weights.get(4);
 //    temp = layer4Input.multiply(transformation4);
 
-//    temp = ProjectMath.sigmoid(temp);
+//    temp = utils.ProjectMath.sigmoid(temp);
 
 
 
@@ -415,11 +421,11 @@ public class Program {
 
 
 
-    //Matrix weights = ResourceReader.readMatrixFromCSV("./src/main/resources/weightsAfter.txt");
+    //Matrix weights = utils.ResourceReader.readMatrixFromCSV("./src/main/resources/weightsAfter.txt");
 
-   /* DataManager manager = new DataManager(URL,TABLE_NAME);
-    List<LabeledResult> results = manager.getLabeledResultsFromDb('O');
-    NetTrainer trainer = new NetTrainer(results);
+   /* utils.DataManager manager = new utils.DataManager(URL,TABLE_NAME);
+    List<machinelearning.LabeledResult> results = manager.getLabeledResultsFromDb('O');
+    machinelearning.NetTrainer trainer = new machinelearning.NetTrainer(results);
     Matrix features = trainer.getFeatures();
     PrintWriter out = new PrintWriter("features.txt");
     out.println(features.toCSV());
@@ -452,9 +458,9 @@ public class Program {
 
 
 
-    /*DataManager manager = new DataManager(URL,TABLE_NAME);
-    List<LabeledResult> results = manager.getLabeledResultsFromDb('X');
-    NetTrainer trainer = new NetTrainer(results);
+    /*utils.DataManager manager = new utils.DataManager(URL,TABLE_NAME);
+    List<machinelearning.LabeledResult> results = manager.getLabeledResultsFromDb('X');
+    machinelearning.NetTrainer trainer = new machinelearning.NetTrainer(results);
     Matrix data = trainer.data;
     System.out.println(data);
     System.out.println();
@@ -469,8 +475,8 @@ public class Program {
 
 /*
 
-    DataManager trainer = new DataManager(URL,TABLE_NAME);
-    List<LabeledResult> labeledResultsForX= trainer.getLabeledResultsFromDb('X');
+    utils.DataManager trainer = new utils.DataManager(URL,TABLE_NAME);
+    List<machinelearning.LabeledResult> labeledResultsForX= trainer.getLabeledResultsFromDb('X');
 */
 
    /* double[][] array1 = {
@@ -538,7 +544,7 @@ public class Program {
 /*
     double[] randomWeigths = {1,2,2,5, -5,6,5,8,40,15};
     trainer.storeWeightsIntoDb('X',randomWeigths);
-    List<LabeledResult> labeledResultsForX = trainer.getLabeledResultsFromDb('X');*/
+    List<machinelearning.LabeledResult> labeledResultsForX = trainer.getLabeledResultsFromDb('X');*/
 /*
     double learningRate = 5;
     double[] initialWeights = new double[10];
@@ -565,28 +571,28 @@ public class Program {
 /*
     double[] weights = {1, 2, 3, 4};
     int[] features = {1, 1, -2, 0};
-    AIPlayer player = new AIPlayer(weights);
+    tictactoe.AIPlayer player = new tictactoe.AIPlayer(weights);
     double dotProduct = player.dotProduct(features,weights);
     System.out.println(dotProduct);*/
 
 /*    String url = "jdbc:sqlite:testDb.db";
     String tableName = "GameStateTest";
-    DataManager trainer = new DataManager(url, tableName);
+    utils.DataManager trainer = new utils.DataManager(url, tableName);
     int[][] someMap = {
         {0,0, 0},
         {0, 1, 0},
         {0,0, -1 }
     };
 
-    GameState state = new GameState(someMap);
+    tictactoe.GameState state = new tictactoe.GameState(someMap);
     state.printOutState();
-    GameStateRecord record = new GameStateRecord(state, 'O');
+    tictactoe.GameStateRecord record = new tictactoe.GameStateRecord(state, 'O');
     trainer.storeSingleGameStateRecord(record);*/
 
 
 /*
-    Player playerX = new AIPlayer(new double[10]);
-    Function<Double,Double> sigmoid = ((AIPlayer) playerX)::sigmoid;
+    tictactoe.Player playerX = new tictactoe.AIPlayer(new double[10]);
+    Function<Double,Double> sigmoid = ((tictactoe.AIPlayer) playerX)::sigmoid;
     System.out.println("sigmoid(0) = " +sigmoid.apply((double)0));
     System.out.println("sigmoid(1) = " + sigmoid.apply((double)1));
     System.out.println("sigmoid(-1) = "+ sigmoid.apply((double)-1));
@@ -598,17 +604,17 @@ public class Program {
 
     double[] weightsX = {0,-1,0,1,0,3,0,1,0,-1};
     double[] weightsY = {1,0,-1,0,1,0,-1,0,1,0};
-    Player playerX = new AIPlayer(weightsX);
-    Player playerY = new AIPlayer(weightsY);
-    GameHost gameHost = new GameHost(playerX,playerY);
-    GameRecord gameRecord = gameHost.playASingleGame();
+    tictactoe.Player playerX = new tictactoe.AIPlayer(weightsX);
+    tictactoe.Player playerY = new tictactoe.AIPlayer(weightsY);
+    tictactoe.GameHost gameHost = new tictactoe.GameHost(playerX,playerY);
+    tictactoe.GameRecord gameRecord = gameHost.playASingleGame();
     System.out.println("Game Over!");
 */
 
     /*
     String url = "jdbc:sqlite:testDb.db";
     String tableName = "GameStateTest";
-    DataManager trainer = new DataManager(url, tableName);
+    utils.DataManager trainer = new utils.DataManager(url, tableName);
     System.out.println("Storing the results of the game!");
     trainer.storeGameRecord(gameRecord);
 */
@@ -619,7 +625,7 @@ public class Program {
     String firstName = "Katerina";
     String lastName = "Sirova";
     String position = "Biologist";
-    String query = "INSERT INTO GameState VALUES (?,?,?,?)";
+    String query = "INSERT INTO tictactoe.GameState VALUES (?,?,?,?)";
     PreparedStatement statement = conn.prepareStatement(query);
     statement.setInt(1,id);
     statement.setString(2,firstName);
@@ -632,9 +638,9 @@ public class Program {
     String position = "Gymnast";
 
     String query = "BEGIN "
-                     + "IF NOT EXISTS (SELECT * FROM GameState WHERE firstName = ? ) "
+                     + "IF NOT EXISTS (SELECT * FROM tictactoe.GameState WHERE firstName = ? ) "
                         + "BEGIN "
-                            + "INSERT INTO GameState VALUES (?, ?, ?, ?)"
+                            + "INSERT INTO tictactoe.GameState VALUES (?, ?, ?, ?)"
                         + "END "
                 + "END";
     PreparedStatement statement = conn.prepareStatement(query);

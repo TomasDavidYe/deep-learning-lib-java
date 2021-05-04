@@ -1,3 +1,5 @@
+package machinelearning;
+
 import java.util.HashMap;
 import java.util.Map;
 import org.la4j.Matrix;
@@ -5,10 +7,10 @@ import org.la4j.Vector;
 
 
 public class NeuralNet {
-  Map<Integer, Matrix> weightMap;
-  Map<Integer, Vector> biasMap;
-  Map<Integer, Integer> layerSizeMap;
-  int numberOfLayers;
+  public Map<Integer, Matrix> weightMap;
+  public Map<Integer, Vector> biasMap;
+  public Map<Integer, Integer> layerSizeMap;
+  public int numberOfLayers;
 
   public NeuralNet(Map<Integer,Matrix> weightMap, Map<Integer,Vector> biasMap, int numberOfLayers) throws NeuralNetException {
     this.layerSizeMap = getNetworkStructure(weightMap,biasMap,numberOfLayers);
@@ -29,7 +31,7 @@ public class NeuralNet {
     return result;
   }
 
-  public NeuralNet add(NeuralNet secondNet) throws NeuralNetException{
+  public NeuralNet add(NeuralNet secondNet) throws NeuralNetException {
     Map<Integer,Matrix> newWeights = new HashMap<>();
     Map<Integer, Vector> newBiases = new HashMap<>();
     for(int k = 1; k < numberOfLayers; k++){
@@ -39,7 +41,7 @@ public class NeuralNet {
     return new NeuralNet(newWeights, newBiases, numberOfLayers);
   }
 
-  public NeuralNet multiplyByScalar(double scalar) throws NeuralNetException{
+  public NeuralNet multiplyByScalar(double scalar) throws NeuralNetException {
 
     Map<Integer,Matrix> newWeights = new HashMap<>();
     Map<Integer, Vector> newBiases = new HashMap<>();

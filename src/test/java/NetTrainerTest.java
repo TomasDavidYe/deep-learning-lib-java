@@ -1,12 +1,13 @@
-import static org.junit.Assert.*;
-
 import java.sql.SQLException;
 import java.util.List;
-import javax.swing.Popup;
+
+import machinelearning.LabeledResult;
+import machinelearning.NetTrainer;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.la4j.Matrix;
+import utils.DataManager;
 
 public class NetTrainerTest {
 

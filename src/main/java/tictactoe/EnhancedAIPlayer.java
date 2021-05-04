@@ -1,8 +1,14 @@
+package tictactoe;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Function;
+
+import machinelearning.NeuralNetwork;
 import org.la4j.Matrix;
+import tictactoe.GameState;
+import tictactoe.Player;
 
 public class EnhancedAIPlayer extends Player {
 

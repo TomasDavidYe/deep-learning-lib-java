@@ -1,3 +1,5 @@
+package tictactoe;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,11 +51,11 @@ public class GameHost {
     if(lastStatePlayed.hasWinner()){
       if(playerXIsPlaying) {
         gameRecord.setWinningSymbol('X');
-        resultMessage = "Player with X has won";
+        resultMessage = "tictactoe.Player with X has won";
       }
       else {
         gameRecord.setWinningSymbol('O');
-        resultMessage = "Player with O has won";
+        resultMessage = "tictactoe.Player with O has won";
       }
     }else{
       gameRecord.setWinningSymbol('N');

@@ -1,5 +1,8 @@
 import java.util.HashMap;
 import java.util.Map;
+
+import machinelearning.NeuralNet;
+import machinelearning.NeuralNetException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,9 +1,8 @@
-//better designed version of the class NeuralNet
+package machinelearning;//better designed version of the class machinelearning.NeuralNet
 
-import java.util.HashMap;
 import java.util.Map;
 import org.la4j.Matrix;
-import org.la4j.Vector;
+import utils.ProjectMath;
 
 public class NeuralNetwork {
   Map<Integer, Matrix> weightMap;
