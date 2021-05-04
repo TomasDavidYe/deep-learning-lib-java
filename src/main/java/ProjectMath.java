@@ -1,10 +1,8 @@
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Predicate;
 import javax.naming.OperationNotSupportedException;
 import org.la4j.Matrix;
 import org.la4j.iterator.MatrixIterator;
-import org.la4j.matrix.functor.MatrixPredicate;
 
 public class ProjectMath {
 
@@ -108,10 +106,11 @@ public class ProjectMath {
         Matrix temp = net.weightMap.get(i - 1).multiply(prevLayer).add(net.biasMap.get(i - 1).toColumnMatrix());
         A.put(i, sigmoid(temp));
       }
+
       Map<Integer, Matrix> deltas = new HashMap<>();
       double[][] tempArray = {{A.get(numberOfLayers).get(0, 0) - y}};
       deltas.put(numberOfLayers, Matrix.from2DArray(tempArray));
-      for(int l = numberOfLayers -1; l >=2; l--){
+      for(int l = numberOfLayers - 1; l >= 1; l--){
         //recursively compute the rest of the deltas going down...
         Matrix prevDelta = deltas.get(l+1);
         Matrix currentA = A.get(l);
@@ -120,7 +119,8 @@ public class ProjectMath {
         Matrix temp = weightsTrans.multiply(prevDelta).hadamardProduct(sigmoidFactor);
         deltas.put(l,temp);
       }
-      for(int l = 1; l< numberOfLayers -1; l++){
+
+      for(int l = 1; l < numberOfLayers - 1; l++){
         org.la4j.Vector bias = localGradient.biasMap.get(l);
         Matrix weights = localGradient.weightMap.get(l);
         int rows = localGradient.weightMap.get(l).rows();
@@ -128,12 +128,13 @@ public class ProjectMath {
         for(int i = 0; i<rows; i++){
           bias.set(i,deltas.get(l+1).get(i,0));
           for(int j = 0; j<columns; j++){
-            double deltaZ = deltas.get(l+1).get(i,0);
+            double deltaZ = deltas.get(l).get(i,0);
             double a = A.get(l).get(j,0);
             weights.set(i,j, deltaZ*a);
           }
         }
       }
+
       NeuralNet tempNet = result.add(localGradient);
       result = tempNet;
     }
@@ -149,9 +150,8 @@ public class ProjectMath {
     System.out.println("Initial cost =  " + cost(initialNet,features,labels));
     NeuralNet result = initialNet;
     for(int iter = 1; iter < numOfIterations; iter++){
-      NeuralNet temp = getGradient(result,features,labels).multiplyByScalar(-learningRate);
-      NeuralNet temp2 = result.add(temp);
-      result = temp2;
+      NeuralNet gradient = getGradient(result,features,labels).multiplyByScalar(-learningRate);
+        result = result.add(gradient);
       System.out.println("Cost int iteration  " + iter + "  =  " + cost(result,features,labels));
     }
     return result;

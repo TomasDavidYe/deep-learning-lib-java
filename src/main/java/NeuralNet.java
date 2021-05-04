@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import org.la4j.Matrix;
 import org.la4j.Vector;
@@ -12,7 +11,7 @@ public class NeuralNet {
   int numberOfLayers;
 
   public NeuralNet(Map<Integer,Matrix> weightMap, Map<Integer,Vector> biasMap, int numberOfLayers) throws NeuralNetException {
-    //this.layerSizeMap = getNetworkStructure(weightMap,biasMap,numberOfLayers);
+    this.layerSizeMap = getNetworkStructure(weightMap,biasMap,numberOfLayers);
     this.numberOfLayers = numberOfLayers;
     this.weightMap = weightMap;
     this.biasMap = biasMap;

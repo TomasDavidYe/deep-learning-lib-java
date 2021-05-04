@@ -1,9 +1,7 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 import org.la4j.Vector;
 
 public class AIPlayer extends   Player {
@@ -106,11 +104,11 @@ public class AIPlayer extends   Player {
     }
 
     public GameState getTheBestMove(List<GameState> possibleMoves){
-      return possibleMoves.stream().max(Comparator.comparing(state -> evaluateWithLinearHypothesis(state))).get();
+      return possibleMoves.stream().max(Comparator.comparing(this::evaluateWithLinearHypothesis)).get();
     }
 
     public GameState getBestMoveWithNeuralNet(List<GameState> possibleMoves){
-      return  possibleMoves.stream().max(Comparator.comparing(state -> evaluateWithNeuralNet(state))).get();
+      return  possibleMoves.stream().max(Comparator.comparing(this::evaluateWithNeuralNet)).get();
     }
 
     public GameState getRandomMove(List<GameState> possibleMoves){
