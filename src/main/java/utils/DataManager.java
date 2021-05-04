@@ -1,6 +1,7 @@
 package utils;
 
 import machinelearning.LabeledResult;
+import machinelearning.NeuralNet;
 import tictactoe.GameRecord;
 import tictactoe.GameStateRecord;
 
@@ -171,6 +172,11 @@ public class DataManager {
     return getOptimalWeights(results,initialWeights, CUSTOM_LEARNING_RATE, CUSTOM_NUMBER_OF_ITERATIONS);
   }
 
+  public NeuralNet initNeuralNetFromDB(){
+    // TODO Implement fetching neural network from DB
+      return null;
+  }
+
 
 
   public double logisticRegressionCost(List<LabeledResult> results, double[] weights){
@@ -213,8 +219,13 @@ public class DataManager {
     });
   }
 
+    public void storeNN(NeuralNet neuralNet, String networkID) {
+    //TODO -> Implement
+      return;
+    }
 
-  @FunctionalInterface
+
+    @FunctionalInterface
   interface generalHypothesis{
     double apply(double[] features, double[] weights);
   }

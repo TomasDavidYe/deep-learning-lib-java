@@ -19,7 +19,7 @@ public class NetTrainerTest {
 
   @Before
   public void init() throws SQLException {
-    String url = Program.URL;
+    String url = TrainNeuralNetwork.URL;
     String tableName = "GameStateTest";
     DataManager manager = new DataManager(url,tableName);
     fetchedResults = manager.getLabeledResultsFromDb('X');
