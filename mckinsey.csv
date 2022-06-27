@@ -1,0 +1,13 @@
+country,money_invested,duration_of_cooperation,weighted_pipeline,sales
+Afghanistan,4.4,32,0,0
+Nepal,6.0,14,111,0.2
+India,21.7,23,879,0.2
+Bangladesh,16.0,18,163,1.5
+South Africa,,5,43,1.2
+Ethiopia,21.6,18,95,10.0
+Kenya,16.2,16,609,12.0
+Uganda,20.0,13,10,10.5
+Nigeria,7.0,12,41,7.3
+Ghana,8.0,14,206,3.2
+Peru,6.0,5,150,0.7
+USA,6.0,5,10,1.5
